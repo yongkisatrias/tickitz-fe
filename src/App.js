@@ -5,40 +5,40 @@ function App() {
   return (
     <div className="App">
       {/* Start Header */}
-      <header class="container pt-4 pb-4">
+      <header className="container pt-4 pb-4">
         {/* Navigation Bar */}
-        <nav class="d-flex justify-content-between align-items-center">
-          <div class="d-flex align-items-center gap-5">
+        <nav className="d-flex justify-content-between align-items-center">
+          <div className="d-flex align-items-center gap-5">
             <img src="/image/logo/Tickitz-1.svg" alt="Tickitz Logo" />
-            <a href="#" class="navbar-menu d-desktop">
+            <a href="#" className="navbar-menu d-desktop">
               Home
             </a>
-            <a href="#" class="navbar-menu d-desktop">
+            <a href="#" className="navbar-menu d-desktop">
               List Movie
             </a>
           </div>
-          <button type="button" class="btn btn-primary px-4 btn-sign-up d-desktop">
+          <button type="button" className="btn btn-primary px-4 btn-sign-up d-desktop">
             Sign Up
           </button>
-          <button class="navbar-toggler d-mobile" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button className="navbar-toggler d-mobile" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <img src="/image/icons/hamburger-menu.svg" />
           </button>
         </nav>
         {/* Navigation Bar Mobile */}
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item d-flex justify-content-center mt-2 mb-2 navbar-menu">
-              <a class="nav-link" href="#">
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item d-flex justify-content-center mt-2 mb-2 navbar-menu">
+              <a className="nav-link" href="#">
                 Home
               </a>
             </li>
-            <li class="nav-item d-flex justify-content-center mt-2 mb-2 navbar-menu">
-              <a class="nav-link" href="#">
+            <li className="nav-item d-flex justify-content-center mt-2 mb-2 navbar-menu">
+              <a className="nav-link" href="#">
                 list Movie
               </a>
             </li>
-            <li class="nav-item d-flex justify-content-center mt-2 mb-2 navbar-menu">
-              <button type="button" class="btn btn-primary btn-sign-up px-4">
+            <li className="nav-item d-flex justify-content-center mt-2 mb-2 navbar-menu">
+              <button type="button" className="btn btn-primary btn-sign-up px-4">
                 Sign Up
               </button>
             </li>
@@ -46,18 +46,40 @@ function App() {
         </div>
         {/* Hero content */}
         <section>
-          <div class="row align-items-center mt-10 mb-10 hero-content">
-            <div class="col-md-6 col-sm-12 text-center">
-              <span class="text-muted">Nearest Cinema, Newest Movie, </span>
-              <h1 class="text-primary">Find out now!</h1>
+          <div className="row align-items-center mt-10 mb-10 hero-content">
+            <div className="col-md-6 col-sm-12 text-center">
+              <span className="text-muted">Nearest Cinema, Newest Movie, </span>
+              <h1 className="text-primary">Find out now!</h1>
             </div>
-            <div class="col-md-6 col-sm-12 text-center">
-              <img src="/image/hero-image/hero-image.png" alt="Movie Banner" class="hero-image" />
+            <div className="col-md-6 col-sm-12 text-center">
+              <img src="/image/hero-image/hero-image.png" alt="Movie Banner" className="hero-image" />
             </div>
           </div>
         </section>
       </header>
       {/* End Header */}
+
+      {/* Start Now Showing */}
+      <section id="now-showing">
+        <div className="container pt-7 pb-7">
+          {/* Header Tittle */}
+          <div className="d-flex justify-content-between align-items-center">
+            <h2 className="now-showing-tittle-left">Now Showing</h2>
+            <a className="now-showing-tittle-right" href="#">
+              View All
+            </a>
+          </div>
+          {/* Now Showing Content */}
+          <div className="movies-scroll mt-5 mb-5">
+            <img className="movie-poster" src="/image/movie-poster/spiderman.jpg" alt="Spiderman" />
+            <img className="movie-poster" src="/image/movie-poster/lion-king.jpg" alt="Lion King" />
+            <img className="movie-poster" src="/image/movie-poster/john-wick-3.jpg" alt="John Wick 3" />
+            <img className="movie-poster" src="/image/movie-poster/black-widow.jpg" alt="Black Widow" />
+            <img className="movie-poster" src="/image/movie-poster/tenet.jpg" alt=" Tenet" />
+          </div>
+        </div>
+      </section>
+      {/* End Now Showing */}
     </div>
   );
 }
