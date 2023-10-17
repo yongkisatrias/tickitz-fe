@@ -222,6 +222,7 @@
 
 .month-scroll {
   display: flex;
+  justify-content: center;
   overflow-x: scroll;
   gap: 10px;
   transition: 0.5s;

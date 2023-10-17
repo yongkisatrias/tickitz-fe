@@ -80,6 +80,102 @@ function App() {
         </div>
       </section>
       {/* End Now Showing */}
+
+      {/* Start Upcoming Movies */}
+      <section id="upcoming-movies" className="mt-7 mb-7">
+        <div className="container pt-5 pb-5">
+          {/* Header Tittle */}
+          <div className="d-flex justify-content-between align-items-center">
+            <h2 className="upcoming-movies-tittle-left">Upcoming Movies</h2>
+            <a className="upcoming-movies-tittle-right" href="#">
+              View All
+            </a>
+          </div>
+          {/* Movies Month */}
+          <div className="text-center month-scroll mt-4">
+            <button type="button" className="btn btn-details px-4">
+              January
+            </button>
+            <button type="button" className="btn btn-details px-4">
+              February
+            </button>
+            <button type="button" className="btn btn-details px-4">
+              March
+            </button>
+            <button type="button" className="btn btn-details px-4">
+              April
+            </button>
+            <button type="button" className="btn btn-details px-4">
+              May
+            </button>
+            <button type="button" className="btn btn-details px-4">
+              June
+            </button>
+            <button type="button" className="btn btn-details px-4">
+              July
+            </button>
+            <button type="button" className="btn btn-details px-4">
+              August
+            </button>
+            <button type="button" className="btn btn-details px-4">
+              September
+            </button>
+            <button type="button" className="btn btn-details px-4">
+              October
+            </button>
+            <button type="button" className="btn btn-details px-4">
+              November
+            </button>
+            <button type="button" className="btn btn-details px-4">
+              December
+            </button>
+          </div>
+          {/* Movies */}
+          <div className="movies-scroll mt-5 mb-5">
+            <div>
+              <img className="movie-poster" src="/image/movie-poster/black-widow.jpg" alt="Black Widow" />
+              <h4 className="text-center mt-2 movie-tittle">Black Widow</h4>
+              <h5 className="text-center movie-genres">Action, Adventure, Sci-Fi</h5>
+              <div className="d-grid">
+                <button className="btn-details mt-2 p-2">Details</button>
+              </div>
+            </div>
+            <div>
+              <img className="movie-poster" src="/image/movie-poster/john-wick-3.jpg" alt="Black Widow" />
+              <h4 className="text-center mt-2 movie-tittle">John Wick</h4>
+              <h5 className="text-center movie-genres">Action, Crime, Thriller</h5>
+              <div className="d-grid">
+                <button className="btn-details mt-2 p-2">Details</button>
+              </div>
+            </div>
+            <div>
+              <img className="movie-poster" src="/image/movie-poster/lion-king.jpg" alt="Black Widow" />
+              <h4 className="text-center mt-2 movie-tittle">The Lion King</h4>
+              <h5 className="text-center movie-genres">Adventure, Drama, Family</h5>
+              <div className="d-grid">
+                <button className="btn-details mt-2 p-2">Details</button>
+              </div>
+            </div>
+            <div>
+              <img className="movie-poster" src="/image/movie-poster/spiderman.jpg" alt="Black Widow" />
+              <h4 className="text-center mt-2 movie-tittle">Spider-Man</h4>
+              <h5 className="text-center movie-genres">Adventure, Action, Sci-Fi</h5>
+              <div className="d-grid">
+                <button className="btn-details mt-2 p-2">Details</button>
+              </div>
+            </div>
+            <div>
+              <img className="movie-poster" src="/image/movie-poster/tenet.jpg" alt="Black Widow" />
+              <h4 className="text-center mt-2 movie-tittle">Tenet</h4>
+              <h5 className="text-center movie-genres">Action, Sci-Fi, Thriller</h5>
+              <div className="d-grid">
+                <button className="btn-details mt-2 p-2">Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* End Upcoming Movies */}
     </div>
   );
 }
