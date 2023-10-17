@@ -176,6 +176,24 @@ function App() {
         </div>
       </section>
       {/* End Upcoming Movies */}
+
+      {/* CTA Start */}
+      <section id="cta" className="mt-5 mb-10">
+        <div className="container mt-5 mb-5">
+          <h3 className="text-muted text-center mt-5">Be the vanguard of the</h3>
+          <h2 className="text-primary text-center">Moviegoers</h2>
+          <div className="d-flex gap-3 justify-content-center mt-4 mb-4">
+            <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" style={{ width: "306px" }} />
+            <button className="btn btn-primary">Join Now</button>
+          </div>
+          <p className="text-center p-cta mt-4 mb-4">
+            By joining you as a Tickitz member,
+            <br />
+            we will always send you the latest updates via email .
+          </p>
+        </div>
+      </section>
+      {/* CTA End */}
     </div>
   );
 }
