@@ -1,6 +1,8 @@
 import "./style/App.css";
 import "./style/app.mobile.css";
 
+import MovieComp from "./components/movie";
+
 function App() {
   return (
     <div className="App">
@@ -89,31 +91,11 @@ function App() {
           </div>
           {/* Now Showing Content */}
           <div className="movies-scroll mt-5 mb-5">
-            <img
-              className="movie-poster"
-              src="/image/movie-poster/spiderman.jpg"
-              alt="Spiderman"
-            />
-            <img
-              className="movie-poster"
-              src="/image/movie-poster/lion-king.jpg"
-              alt="Lion King"
-            />
-            <img
-              className="movie-poster"
-              src="/image/movie-poster/john-wick-3.jpg"
-              alt="John Wick 3"
-            />
-            <img
-              className="movie-poster"
-              src="/image/movie-poster/black-widow.jpg"
-              alt="Black Widow"
-            />
-            <img
-              className="movie-poster"
-              src="/image/movie-poster/tenet.jpg"
-              alt=" Tenet"
-            />
+            <MovieComp />
+            <MovieComp />
+            <MovieComp />
+            <MovieComp />
+            <MovieComp />
           </div>
         </div>
       </section>
@@ -170,76 +152,11 @@ function App() {
           </div>
           {/* Movies */}
           <div className="movies-scroll mt-5 mb-5">
-            <div>
-              <img
-                className="movie-poster"
-                src="/image/movie-poster/black-widow.jpg"
-                alt="Black Widow"
-              />
-              <h4 className="text-center mt-2 movie-tittle">Black Widow</h4>
-              <h5 className="text-center movie-genres">
-                Action, Adventure, Sci-Fi
-              </h5>
-              <div className="d-grid">
-                <button className="btn-details mt-2 p-2">Details</button>
-              </div>
-            </div>
-            <div>
-              <img
-                className="movie-poster"
-                src="/image/movie-poster/john-wick-3.jpg"
-                alt="Black Widow"
-              />
-              <h4 className="text-center mt-2 movie-tittle">John Wick</h4>
-              <h5 className="text-center movie-genres">
-                Action, Crime, Thriller
-              </h5>
-              <div className="d-grid">
-                <button className="btn-details mt-2 p-2">Details</button>
-              </div>
-            </div>
-            <div>
-              <img
-                className="movie-poster"
-                src="/image/movie-poster/lion-king.jpg"
-                alt="Black Widow"
-              />
-              <h4 className="text-center mt-2 movie-tittle">The Lion King</h4>
-              <h5 className="text-center movie-genres">
-                Adventure, Drama, Family
-              </h5>
-              <div className="d-grid">
-                <button className="btn-details mt-2 p-2">Details</button>
-              </div>
-            </div>
-            <div>
-              <img
-                className="movie-poster"
-                src="/image/movie-poster/spiderman.jpg"
-                alt="Black Widow"
-              />
-              <h4 className="text-center mt-2 movie-tittle">Spider-Man</h4>
-              <h5 className="text-center movie-genres">
-                Adventure, Action, Sci-Fi
-              </h5>
-              <div className="d-grid">
-                <button className="btn-details mt-2 p-2">Details</button>
-              </div>
-            </div>
-            <div>
-              <img
-                className="movie-poster"
-                src="/image/movie-poster/tenet.jpg"
-                alt="Black Widow"
-              />
-              <h4 className="text-center mt-2 movie-tittle">Tenet</h4>
-              <h5 className="text-center movie-genres">
-                Action, Sci-Fi, Thriller
-              </h5>
-              <div className="d-grid">
-                <button className="btn-details mt-2 p-2">Details</button>
-              </div>
-            </div>
+            <MovieComp />
+            <MovieComp />
+            <MovieComp />
+            <MovieComp />
+            <MovieComp />
           </div>
         </div>
       </section>
