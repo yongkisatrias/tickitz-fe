@@ -297,8 +297,7 @@ function App() {
             <div className="d-flex justify-content-center-mobile">
               <img
                 src="/image/cinemas/ebv.id 2.svg"
-                alt=""
-                srcset=""
+                alt="ebv.id"
                 style={{ display: "block" }}
                 className="mt-4 mb-4"
               />
@@ -306,8 +305,7 @@ function App() {
             <div className="d-flex justify-content-center-mobile">
               <img
                 src="/image/cinemas/CineOne21 2.svg"
-                alt=""
-                srcset=""
+                alt="cineOne21"
                 style={{ display: "block" }}
                 className="mt-4 mb-4"
               />
@@ -315,8 +313,7 @@ function App() {
             <div className="d-flex justify-content-center-mobile">
               <img
                 src="/image/cinemas/hiflix 2.svg"
-                alt=""
-                srcset=""
+                alt="hiflix"
                 style={{ display: "block" }}
                 className="mt-4 mb-4"
               />
@@ -325,19 +322,19 @@ function App() {
           <div className="col-md-3 col-sm-12 social-media">
             <h5 className="text-center-mobile">Follow Us</h5>
             <div className="d-flex justify-content-center-mobile gap-3 mt-4 mb-4">
-              <img src="/image/social-media/facebook.png" alt="" srcset="" />
+              <img src="/image/social-media/facebook.png" alt="facebook" />
               <a href="/">Tickitz Cinema id</a>
             </div>
             <div className="d-flex justify-content-center-mobile gap-3 mt-4 mb-4">
-              <img src="/image/social-media/instagram.png" alt="" srcset="" />
+              <img src="/image/social-media/instagram.png" alt="instagram" />
               <a href="/">tickitz.id</a>
             </div>
             <div className="d-flex justify-content-center-mobile gap-3 mt-4 mb-4">
-              <img src="/image/social-media/twitter.png" alt="" srcset="" />
+              <img src="/image/social-media/twitter.png" alt="twitter" />
               <a href="/">tickitz.id</a>
             </div>
             <div className="d-flex justify-content-center-mobile gap-3 mt-4 mb-4">
-              <img src="/image/social-media/youtube.png" alt="" srcset="" />
+              <img src="/image/social-media/youtube.png" alt="youtube" />
               <a href="/">Tickitz Cinema id</a>
             </div>
           </div>
