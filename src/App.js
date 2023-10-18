@@ -17,10 +17,21 @@ function App() {
               List Movie
             </a>
           </div>
-          <button type="button" className="btn btn-primary px-4 btn-sign-up d-desktop">
+          <button
+            type="button"
+            className="btn btn-primary px-4 btn-sign-up d-desktop"
+          >
             Sign Up
           </button>
-          <button className="navbar-toggler d-mobile" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            className="navbar-toggler d-mobile"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <img src="/image/icons/hamburger-menu.svg" alt="Menu" />
           </button>
         </nav>
@@ -38,7 +49,10 @@ function App() {
               </a>
             </li>
             <li className="nav-item d-flex justify-content-center mt-2 mb-2 navbar-menu">
-              <button type="button" className="btn btn-primary btn-sign-up px-4">
+              <button
+                type="button"
+                className="btn btn-primary btn-sign-up px-4"
+              >
                 Sign Up
               </button>
             </li>
@@ -52,7 +66,11 @@ function App() {
               <h1 className="text-primary">Find out now!</h1>
             </div>
             <div className="col-md-6 col-sm-12 text-center">
-              <img src="/image/hero-image/hero-image.png" alt="Movie Banner" className="hero-image" />
+              <img
+                src="/image/hero-image/hero-image.png"
+                alt="Movie Banner"
+                className="hero-image"
+              />
             </div>
           </div>
         </section>
@@ -71,11 +89,31 @@ function App() {
           </div>
           {/* Now Showing Content */}
           <div className="movies-scroll mt-5 mb-5">
-            <img className="movie-poster" src="/image/movie-poster/spiderman.jpg" alt="Spiderman" />
-            <img className="movie-poster" src="/image/movie-poster/lion-king.jpg" alt="Lion King" />
-            <img className="movie-poster" src="/image/movie-poster/john-wick-3.jpg" alt="John Wick 3" />
-            <img className="movie-poster" src="/image/movie-poster/black-widow.jpg" alt="Black Widow" />
-            <img className="movie-poster" src="/image/movie-poster/tenet.jpg" alt=" Tenet" />
+            <img
+              className="movie-poster"
+              src="/image/movie-poster/spiderman.jpg"
+              alt="Spiderman"
+            />
+            <img
+              className="movie-poster"
+              src="/image/movie-poster/lion-king.jpg"
+              alt="Lion King"
+            />
+            <img
+              className="movie-poster"
+              src="/image/movie-poster/john-wick-3.jpg"
+              alt="John Wick 3"
+            />
+            <img
+              className="movie-poster"
+              src="/image/movie-poster/black-widow.jpg"
+              alt="Black Widow"
+            />
+            <img
+              className="movie-poster"
+              src="/image/movie-poster/tenet.jpg"
+              alt=" Tenet"
+            />
           </div>
         </div>
       </section>
@@ -133,41 +171,71 @@ function App() {
           {/* Movies */}
           <div className="movies-scroll mt-5 mb-5">
             <div>
-              <img className="movie-poster" src="/image/movie-poster/black-widow.jpg" alt="Black Widow" />
+              <img
+                className="movie-poster"
+                src="/image/movie-poster/black-widow.jpg"
+                alt="Black Widow"
+              />
               <h4 className="text-center mt-2 movie-tittle">Black Widow</h4>
-              <h5 className="text-center movie-genres">Action, Adventure, Sci-Fi</h5>
+              <h5 className="text-center movie-genres">
+                Action, Adventure, Sci-Fi
+              </h5>
               <div className="d-grid">
                 <button className="btn-details mt-2 p-2">Details</button>
               </div>
             </div>
             <div>
-              <img className="movie-poster" src="/image/movie-poster/john-wick-3.jpg" alt="Black Widow" />
+              <img
+                className="movie-poster"
+                src="/image/movie-poster/john-wick-3.jpg"
+                alt="Black Widow"
+              />
               <h4 className="text-center mt-2 movie-tittle">John Wick</h4>
-              <h5 className="text-center movie-genres">Action, Crime, Thriller</h5>
+              <h5 className="text-center movie-genres">
+                Action, Crime, Thriller
+              </h5>
               <div className="d-grid">
                 <button className="btn-details mt-2 p-2">Details</button>
               </div>
             </div>
             <div>
-              <img className="movie-poster" src="/image/movie-poster/lion-king.jpg" alt="Black Widow" />
+              <img
+                className="movie-poster"
+                src="/image/movie-poster/lion-king.jpg"
+                alt="Black Widow"
+              />
               <h4 className="text-center mt-2 movie-tittle">The Lion King</h4>
-              <h5 className="text-center movie-genres">Adventure, Drama, Family</h5>
+              <h5 className="text-center movie-genres">
+                Adventure, Drama, Family
+              </h5>
               <div className="d-grid">
                 <button className="btn-details mt-2 p-2">Details</button>
               </div>
             </div>
             <div>
-              <img className="movie-poster" src="/image/movie-poster/spiderman.jpg" alt="Black Widow" />
+              <img
+                className="movie-poster"
+                src="/image/movie-poster/spiderman.jpg"
+                alt="Black Widow"
+              />
               <h4 className="text-center mt-2 movie-tittle">Spider-Man</h4>
-              <h5 className="text-center movie-genres">Adventure, Action, Sci-Fi</h5>
+              <h5 className="text-center movie-genres">
+                Adventure, Action, Sci-Fi
+              </h5>
               <div className="d-grid">
                 <button className="btn-details mt-2 p-2">Details</button>
               </div>
             </div>
             <div>
-              <img className="movie-poster" src="/image/movie-poster/tenet.jpg" alt="Black Widow" />
+              <img
+                className="movie-poster"
+                src="/image/movie-poster/tenet.jpg"
+                alt="Black Widow"
+              />
               <h4 className="text-center mt-2 movie-tittle">Tenet</h4>
-              <h5 className="text-center movie-genres">Action, Sci-Fi, Thriller</h5>
+              <h5 className="text-center movie-genres">
+                Action, Sci-Fi, Thriller
+              </h5>
               <div className="d-grid">
                 <button className="btn-details mt-2 p-2">Details</button>
               </div>
@@ -180,10 +248,18 @@ function App() {
       {/* CTA Start */}
       <section id="cta" className="mt-5 mb-10">
         <div className="container mt-5 mb-5">
-          <h3 className="text-muted text-center mt-5">Be the vanguard of the</h3>
+          <h3 className="text-muted text-center mt-5">
+            Be the vanguard of the
+          </h3>
           <h2 className="text-primary text-center">Moviegoers</h2>
           <div className="d-flex gap-3 justify-content-center mt-4 mb-4">
-            <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" style={{ width: "306px" }} />
+            <input
+              type="email"
+              className="form-control"
+              id="exampleFormControlInput1"
+              placeholder="name@example.com"
+              style={{ width: "306px" }}
+            />
             <button className="btn btn-primary">Join Now</button>
           </div>
           <p className="text-center p-cta mt-4 mb-4">
@@ -219,13 +295,31 @@ function App() {
           <div className="col-md-3 col-sm-12">
             <h5 className="text-center-mobile">Our Sponsor</h5>
             <div className="d-flex justify-content-center-mobile">
-              <img src="/image/cinemas/ebv.id 2.svg" alt="" srcset="" style={{ display: "block" }} className="mt-4 mb-4" />
+              <img
+                src="/image/cinemas/ebv.id 2.svg"
+                alt=""
+                srcset=""
+                style={{ display: "block" }}
+                className="mt-4 mb-4"
+              />
             </div>
             <div className="d-flex justify-content-center-mobile">
-              <img src="/image/cinemas/CineOne21 2.svg" alt="" srcset="" style={{ display: "block" }} className="mt-4 mb-4" />
+              <img
+                src="/image/cinemas/CineOne21 2.svg"
+                alt=""
+                srcset=""
+                style={{ display: "block" }}
+                className="mt-4 mb-4"
+              />
             </div>
             <div className="d-flex justify-content-center-mobile">
-              <img src="/image/cinemas/hiflix 2.svg" alt="" srcset="" style={{ display: "block" }} className="mt-4 mb-4" />
+              <img
+                src="/image/cinemas/hiflix 2.svg"
+                alt=""
+                srcset=""
+                style={{ display: "block" }}
+                className="mt-4 mb-4"
+              />
             </div>
           </div>
           <div className="col-md-3 col-sm-12 social-media">
@@ -248,7 +342,9 @@ function App() {
             </div>
           </div>
         </div>
-        <p className="copyright text-center mt-5">© 2020 Tickitz. All Rights Reserved.</p>
+        <p className="copyright text-center mt-5">
+          © 2020 Tickitz. All Rights Reserved.
+        </p>
       </footer>
       {/* Footer End */}
     </div>
