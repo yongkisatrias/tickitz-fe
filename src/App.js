@@ -1,7 +1,8 @@
 import "./style/App.css";
 import "./style/app.mobile.css";
 
-import MovieComp from "./components/movie";
+import MovieComp from "./components/Movie.jsx";
+import IconText from "./components/IconText.jsx";
 
 function App() {
   return (
@@ -238,22 +239,10 @@ function App() {
           </div>
           <div className="col-md-3 col-sm-12 social-media">
             <h5 className="text-center-mobile">Follow Us</h5>
-            <div className="d-flex justify-content-center-mobile gap-3 mt-4 mb-4">
-              <img src="/image/social-media/facebook.png" alt="facebook" />
-              <a href="/">Tickitz Cinema id</a>
-            </div>
-            <div className="d-flex justify-content-center-mobile gap-3 mt-4 mb-4">
-              <img src="/image/social-media/instagram.png" alt="instagram" />
-              <a href="/">tickitz.id</a>
-            </div>
-            <div className="d-flex justify-content-center-mobile gap-3 mt-4 mb-4">
-              <img src="/image/social-media/twitter.png" alt="twitter" />
-              <a href="/">tickitz.id</a>
-            </div>
-            <div className="d-flex justify-content-center-mobile gap-3 mt-4 mb-4">
-              <img src="/image/social-media/youtube.png" alt="youtube" />
-              <a href="/">Tickitz Cinema id</a>
-            </div>
+            <IconText />
+            <IconText />
+            <IconText />
+            <IconText />
           </div>
         </div>
         <p className="copyright text-center mt-5">
