@@ -10,10 +10,10 @@ function App() {
         <nav className="d-flex justify-content-between align-items-center">
           <div className="d-flex align-items-center gap-5">
             <img src="/image/logo/Tickitz-1.svg" alt="Tickitz Logo" />
-            <a href="#" className="navbar-menu d-desktop">
+            <a href="/" className="navbar-menu d-desktop">
               Home
             </a>
-            <a href="#" className="navbar-menu d-desktop">
+            <a href="/" className="navbar-menu d-desktop">
               List Movie
             </a>
           </div>
@@ -21,19 +21,19 @@ function App() {
             Sign Up
           </button>
           <button className="navbar-toggler d-mobile" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <img src="/image/icons/hamburger-menu.svg" />
+            <img src="/image/icons/hamburger-menu.svg" alt="Menu" />
           </button>
         </nav>
         {/* Navigation Bar Mobile */}
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item d-flex justify-content-center mt-2 mb-2 navbar-menu">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/">
                 Home
               </a>
             </li>
             <li className="nav-item d-flex justify-content-center mt-2 mb-2 navbar-menu">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/">
                 list Movie
               </a>
             </li>
@@ -65,7 +65,7 @@ function App() {
           {/* Header Tittle */}
           <div className="d-flex justify-content-between align-items-center">
             <h2 className="now-showing-tittle-left">Now Showing</h2>
-            <a className="now-showing-tittle-right" href="#">
+            <a className="now-showing-tittle-right" href="/">
               View All
             </a>
           </div>
@@ -87,7 +87,7 @@ function App() {
           {/* Header Tittle */}
           <div className="d-flex justify-content-between align-items-center">
             <h2 className="upcoming-movies-tittle-left">Upcoming Movies</h2>
-            <a className="upcoming-movies-tittle-right" href="#">
+            <a className="upcoming-movies-tittle-right" href="/">
               View All
             </a>
           </div>
@@ -209,8 +209,12 @@ function App() {
           </div>
           <div className="col-md-2 col-sm-12 explore text-center-mobile">
             <h5>Explore</h5>
-            <a className="mt-4 mb-4">Home</a>
-            <a className="mt-4 mb-4">List Movie</a>
+            <a href="/" className="mt-4 mb-4">
+              Home
+            </a>
+            <a href="/" className="mt-4 mb-4">
+              List Movie
+            </a>
           </div>
           <div className="col-md-3 col-sm-12">
             <h5 className="text-center-mobile">Our Sponsor</h5>
@@ -228,19 +232,19 @@ function App() {
             <h5 className="text-center-mobile">Follow Us</h5>
             <div className="d-flex justify-content-center-mobile gap-3 mt-4 mb-4">
               <img src="/image/social-media/facebook.png" alt="" srcset="" />
-              <a href="#">Tickitz Cinema id</a>
+              <a href="/">Tickitz Cinema id</a>
             </div>
             <div className="d-flex justify-content-center-mobile gap-3 mt-4 mb-4">
               <img src="/image/social-media/instagram.png" alt="" srcset="" />
-              <a href="#">tickitz.id</a>
+              <a href="/">tickitz.id</a>
             </div>
             <div className="d-flex justify-content-center-mobile gap-3 mt-4 mb-4">
               <img src="/image/social-media/twitter.png" alt="" srcset="" />
-              <a href="#">tickitz.id</a>
+              <a href="/">tickitz.id</a>
             </div>
             <div className="d-flex justify-content-center-mobile gap-3 mt-4 mb-4">
               <img src="/image/social-media/youtube.png" alt="" srcset="" />
-              <a href="#">Tickitz Cinema id</a>
+              <a href="/">Tickitz Cinema id</a>
             </div>
           </div>
         </div>
