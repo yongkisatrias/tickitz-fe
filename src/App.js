@@ -8,7 +8,11 @@ import axios from "axios";
 
 function App() {
   // mounted / mounting
+  const date = new Date();
+  const month = date.toLocaleDateString("default", { month: "long" });
+
   const [result, setResult] = React.useState([]);
+  const [selectedMonth, setSelectedMonth] = React.useState(month.toLowerCase());
 
   // lifecycle
   React.useEffect(() => {
@@ -136,43 +140,36 @@ function App() {
             </a>
           </div>
           {/* Movies Month */}
-          <div className="text-center month-scroll mt-4">
-            <button type="button" className="btn btn-details px-4">
-              January
-            </button>
-            <button type="button" className="btn btn-details px-4">
-              February
-            </button>
-            <button type="button" className="btn btn-details px-4">
-              March
-            </button>
-            <button type="button" className="btn btn-details px-4">
-              April
-            </button>
-            <button type="button" className="btn btn-details px-4">
-              May
-            </button>
-            <button type="button" className="btn btn-details px-4">
-              June
-            </button>
-            <button type="button" className="btn btn-details px-4">
-              July
-            </button>
-            <button type="button" className="btn btn-details px-4">
-              August
-            </button>
-            <button type="button" className="btn btn-details px-4">
-              September
-            </button>
-            <button type="button" className="btn btn-details px-4">
-              October
-            </button>
-            <button type="button" className="btn btn-details px-4">
-              November
-            </button>
-            <button type="button" className="btn btn-details px-4">
-              December
-            </button>
+          <div className="mt-3">
+            <div className="month-scroll">
+              {[
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December",
+              ].map((item) => (
+                <button
+                  className={
+                    selectedMonth === item.toLowerCase()
+                      ? "btn btn-primary px-4"
+                      : "btn btn-details px-4"
+                  }
+                  onClick={() => {
+                    setSelectedMonth(item.toLowerCase());
+                  }}
+                >
+                  {item}
+                </button>
+              ))}
+            </div>
           </div>
           {/* Movies */}
           <div className="movies-scroll mt-5 mb-5">
