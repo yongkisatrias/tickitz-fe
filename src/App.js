@@ -3,6 +3,7 @@ import "./style/app.mobile.css";
 
 import MovieComp from "./components/Movie.jsx";
 import IconText from "./components/IconText.jsx";
+import React from "react";
 
 function App() {
   return (
