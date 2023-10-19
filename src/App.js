@@ -4,8 +4,24 @@ import "./style/app.mobile.css";
 import MovieComp from "./components/Movie.jsx";
 import IconText from "./components/IconText.jsx";
 import React from "react";
+import axios from "axios";
 
 function App() {
+  // mounted / mounting
+  const [result, setResult] = React.useState([]);
+
+  // lifecycle
+  React.useEffect(() => {
+    axios
+      .get("http://localhost:3000/api/movie.json")
+      .then((response) => {
+        if (response.status === 200) {
+          setResult(response.data);
+        }
+      })
+      .catch((error) => console.log(`error: ${error}`));
+  }, []);
+
   return (
     <div className="App">
       {/* Start Header */}
@@ -93,11 +109,17 @@ function App() {
           </div>
           {/* Now Showing Content */}
           <div className="movies-scroll mt-5 mb-5">
-            <MovieComp />
-            <MovieComp />
-            <MovieComp />
-            <MovieComp />
-            <MovieComp />
+            {result
+              .filter((item) => item.isShowing === true)
+              .slice(0, 5)
+              .map((item) => (
+                <MovieComp
+                  poster={item.poster}
+                  tittle={item.tittle}
+                  genres={item.genres}
+                  desc={item.desc}
+                />
+              ))}
           </div>
         </div>
       </section>
