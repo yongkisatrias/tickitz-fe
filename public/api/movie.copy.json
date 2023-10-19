@@ -658,5 +658,65 @@
     "genres": ["drama"],
     "isShowing": false,
     "showingMonth": "november"
+  },
+  {
+    "poster": "https://m.media-amazon.com/images/M/MV5BZjAxNDA2MmMtNTk1Ni00N2RhLWE4ZjYtYWM2YWYxMzc3YjE4XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_FMjpg_UX1000_.jpg",
+    "tittle": "Eileen",
+    "desc": "A woman's friendship with a new co-worker at the prison facility where she works takes a sinister turn.",
+    "release": "December 8, 2023",
+    "director": "William Oldroyd",
+    "duration": "1h 37m",
+    "cast": ["Thomasin McKenzie", "Shea Whigham", "Sam Nivola"],
+    "genres": ["drama", "mystery", "thriller"],
+    "isShowing": false,
+    "showingMonth": "december"
+  },
+  {
+    "poster": "https://m.media-amazon.com/images/M/MV5BNGIyYWMzNjktNDE3MC00YWQyLWEyMmEtN2ZmNzZhZDk3NGJlXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
+    "tittle": "Poor Things",
+    "desc": "The incredible tale about the fantastical evolution of Bella Baxter, a young woman brought back to life by the brilliant and unorthodox scientist Dr. Godwin Baxter.",
+    "release": "December 8, 2023",
+    "director": "Yorgos Lanthimos",
+    "duration": "2h 12m",
+    "cast": ["Emma Stone", "Mark Ruffalo", "Willem Dafoe"],
+    "genres": ["romance", "Sci-Fi"],
+    "isShowing": false,
+    "showingMonth": "december"
+  },
+  {
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTVlN2I1ODEtMTJmZC00Y2ExLWI2NDUtMzNmMGFmODY2NWFmXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_FMjpg_UX1000_.jpg",
+    "tittle": "Leave the World Behind",
+    "desc": "Family drama based on the novel by Rumaan Alam.",
+    "release": "December 7, 2023",
+    "director": "Sam Esmail",
+    "duration": "2h 18m",
+    "cast": ["Julia Roberts", "Mahershala Ali", "Ethan Hawke"],
+    "genres": ["drama"],
+    "isShowing": false,
+    "showingMonth": "december"
+  },
+  {
+    "poster": "https://pics.filmaffinity.com/Magazine_Dreams-416435534-large.jpg",
+    "tittle": "Magazine Dreams",
+    "desc": "A Black amateur bodybuilder struggles to find human connection in this exploration of celebrity and violence.",
+    "release": "December 8, 2023",
+    "director": "Elijah Bynum",
+    "duration": "2h 4m",
+    "cast": ["Jonathan Majors", "Harrison Page", "Harriet Sansom Harris"],
+    "genres": ["drama"],
+    "isShowing": false,
+    "showingMonth": "december"
+  },
+  {
+    "poster": "https://m.media-amazon.com/images/M/MV5BNzJiZGRkMDgtZWFlOS00MWRhLThhNTEtMjljZTJjYTljYTBjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg",
+    "tittle": "Wonka",
+    "desc": "The story will focus specifically on a young Willy Wonka and how he met the Oompa-Loompas on one of his earliest adventures.",
+    "release": "December 15, 2023",
+    "director": "Paul King",
+    "duration": "TBA",
+    "cast": ["Timothée Chalamet", "Olivia Colman", "Hugh Grant"],
+    "genres": ["adventure", "comedy", "family"],
+    "isShowing": false,
+    "showingMonth": "december"
   }
 ]

@@ -173,12 +173,35 @@ function App() {
           </div>
           {/* Movies */}
           <div className="movies-scroll mt-5 mb-5">
-            <MovieComp />
-            <MovieComp />
-            <MovieComp />
-            <MovieComp />
-            <MovieComp />
+            {result
+              .filter((item) => item.isShowing === false || true)
+              .filter((item) => item.showingMonth === selectedMonth)
+              .slice(0, 5)
+              .map((item) => (
+                <MovieComp
+                  poster={item.poster}
+                  tittle={item.tittle}
+                  genres={item.genres}
+                  desc={item.desc}
+                />
+              ))}
           </div>
+          {/* Not Found Movie */}
+          {result
+            .filter((item) => item.isShowing === false || true)
+            .filter((item) => item.showingMonth === selectedMonth).length ===
+          0 ? (
+            <div className="text-center">
+              <img
+                style={{
+                  width: "120px",
+                }}
+                src="/image/icons/not-found.png"
+                alt="not found"
+              />
+              <h4 className="mt-3">Movie Not Found</h4>
+            </div>
+          ) : null}
         </div>
       </section>
       {/* End Upcoming Movies */}
