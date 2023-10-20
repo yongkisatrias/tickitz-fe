@@ -1,10 +1,12 @@
 import React from "react";
 
-function Icontext() {
+function Icontext(props) {
+  const { icon, text } = props;
+
   return (
     <div className="d-flex justify-content-center-mobile gap-3 mt-4 mb-4">
-      <img src="/image/social-media/facebook.png" alt="facebook" />
-      <a href="/">Tickitz Cinema id</a>
+      <img src={icon} alt="social media" />
+      <a href="/">{text}</a>
     </div>
   );
 }

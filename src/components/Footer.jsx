@@ -54,10 +54,22 @@ function Footer() {
           </div>
           <div className="col-md-3 col-sm-12 social-media">
             <h5 className="text-center-mobile">Follow Us</h5>
-            <IconText />
-            <IconText />
-            <IconText />
-            <IconText />
+            <IconText
+              icon="/image/social-media/facebook.png"
+              text="Tickitz Cinema id"
+            />
+            <IconText
+              icon="/image/social-media/instagram.png"
+              text="tickitz.id"
+            />
+            <IconText
+              icon="/image/social-media/twitter.png"
+              text="tickitz.id"
+            />
+            <IconText
+              icon="/image/social-media/youtube.png"
+              text="Tickitz Cinema id"
+            />
           </div>
         </div>
         <p className="copyright text-center mt-5">
