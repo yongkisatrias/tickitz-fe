@@ -36,6 +36,7 @@
   font-weight: 400;
   line-height: 34px;
   letter-spacing: 0.75px;
+  text-transform: capitalize;
 }
 
 .text-muted {
@@ -102,6 +103,14 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+.loading-bar {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .loading-bar p {
