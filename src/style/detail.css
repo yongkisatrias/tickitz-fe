@@ -1,0 +1,115 @@
+/* Font */
+/* font-family: 'Mulish', sans-serif; */
+
+#content_detail div div img {
+  width: 236.717px;
+  height: 362.831px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+#content_detail .border-image-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #dedede;
+  width: 332px;
+  height: 458px;
+  border-radius: 16px;
+}
+
+#content_detail div div h2 {
+  color: #14142b;
+  font-family: "Mulish", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 1px;
+}
+
+#content_detail div div .genres {
+  color: #4e4b66;
+  font-family: "Mulish", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0.75px;
+}
+
+.text-muted {
+  color: #8692a6;
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  margin-bottom: 0;
+}
+
+.text-content {
+  color: #121212;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.75px;
+}
+
+#content_detail div div div h5 {
+  color: #000;
+  font-family: "Mulish", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 34px;
+  letter-spacing: 0.5px;
+}
+
+.synopsis-content {
+  color: #4e4b66;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.75px;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #5f2eea;
+  border-color: #5f2eea transparent #5f2eea transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-bar p {
+  color: #4e4b66;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.75px;
+}
