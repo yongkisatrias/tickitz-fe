@@ -169,7 +169,7 @@ function Home() {
               type="email"
               className="form-control"
               id="exampleFormControlInput1"
-              placeholder="name@example.com"
+              placeholder="Type your email here.."
               style={{ width: "306px" }}
             />
             <button className="btn btn-primary">Join Now</button>
