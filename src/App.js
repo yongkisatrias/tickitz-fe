@@ -2,6 +2,7 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Home from "./pages/Home";
+import Detail from "./pages/Detail";
 
 // list pages
 const router = createBrowserRouter([
@@ -10,8 +11,8 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/about",
-    element: <div>About</div>,
+    path: "/detail/:id",
+    element: <Detail />,
   },
 ]);
 
