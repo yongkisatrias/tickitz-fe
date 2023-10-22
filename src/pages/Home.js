@@ -190,7 +190,7 @@ function Home() {
       {/* Footer End */}
 
       {/* Scroll To Top Button */}
-      <ScrollToTop smooth />
+      <ScrollToTop smooth color="#5f2eea" />
     </div>
   );
 }
