@@ -3,6 +3,7 @@ import "../style/detail.css";
 import React from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import ScrollToTop from "react-scroll-to-top";
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -124,6 +125,9 @@ function Detail() {
       {/* Start Footer */}
       <Footer />
       {/* End Footer */}
+
+      {/* Scroll To Top Button */}
+      <ScrollToTop smooth />
     </>
   );
 }

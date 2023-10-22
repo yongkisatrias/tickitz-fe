@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import ScrollToTop from "react-scroll-to-top";
 
 function Home() {
   // mounted / mounting
@@ -187,6 +188,9 @@ function Home() {
       {/* Footer Start */}
       <Footer />
       {/* Footer End */}
+
+      {/* Scroll To Top Button */}
+      <ScrollToTop smooth />
     </div>
   );
 }
