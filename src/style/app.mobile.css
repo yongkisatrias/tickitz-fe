@@ -61,6 +61,7 @@
   }
 
   .justify-content-center-mobile {
+    display: flex;
     justify-content: center;
   }
 }

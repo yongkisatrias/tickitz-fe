@@ -13,6 +13,7 @@ function Detail() {
 
   // lifecycle
   React.useEffect(() => {
+    window.scrollTo(0, 0);
     setTimeout(() => {
       axios
         .get("http://localhost:3000/api/movie.json")
@@ -53,7 +54,7 @@ function Detail() {
         <>
           {/* Start Content */}
           <section id="content_detail" className="container mt-4 mb-4">
-            <div className="row gap-5">
+            <div className="row gap-5 justify-content-center-mobile">
               <div className="col-md-4 col-sm-12 border-image-detail">
                 <img
                   className="movie-poster-detail"
