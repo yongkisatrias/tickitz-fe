@@ -1,5 +1,6 @@
 import IconText from "../components/IconText.jsx";
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -18,12 +19,12 @@ function Footer() {
           </div>
           <div className="col-md-2 col-sm-12 explore text-center-mobile">
             <h5>Explore</h5>
-            <a href="/" className="mt-4 mb-4">
+            <Link to="/" className="mt-4 mb-4">
               Home
-            </a>
-            <a href="/" className="mt-4 mb-4">
+            </Link>
+            <Link to="/" className="mt-4 mb-4">
               List Movie
-            </a>
+            </Link>
           </div>
           <div className="col-md-3 col-sm-12">
             <h5 className="text-center-mobile">Our Sponsor</h5>

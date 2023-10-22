@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -7,12 +8,12 @@ function NavBar() {
       <nav className="d-flex justify-content-between align-items-center">
         <div className="d-flex align-items-center gap-5">
           <img src="/image/logo/Tickitz-1.svg" alt="Tickitz Logo" />
-          <a href="/" className="navbar-menu d-desktop">
+          <Link to="/" className="navbar-menu d-desktop">
             Home
-          </a>
-          <a href="/" className="navbar-menu d-desktop">
+          </Link>
+          <Link to="/" className="navbar-menu d-desktop">
             List Movie
-          </a>
+          </Link>
         </div>
         <button
           type="button"
@@ -36,14 +37,14 @@ function NavBar() {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item d-flex justify-content-center mt-2 mb-2 navbar-menu">
-            <a className="nav-link" href="/">
+            <Link className="nav-link" to="/">
               Home
-            </a>
+            </Link>
           </li>
           <li className="nav-item d-flex justify-content-center mt-2 mb-2 navbar-menu">
-            <a className="nav-link" href="/">
+            <Link className="nav-link" to="/">
               list Movie
-            </a>
+            </Link>
           </li>
           <li className="nav-item d-flex justify-content-center mt-2 mb-2 navbar-menu">
             <button type="button" className="btn btn-primary btn-sign-up px-4">

@@ -3,6 +3,7 @@ import "../style/detail.css";
 import React from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";

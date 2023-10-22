@@ -6,6 +6,7 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import React from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Home() {
   // mounted / mounting
@@ -58,9 +59,9 @@ function Home() {
           {/* Header Tittle */}
           <div className="d-flex justify-content-between align-items-center">
             <h2 className="now-showing-tittle-left">Now Showing</h2>
-            <a className="now-showing-tittle-right" href="/">
+            <Link className="now-showing-tittle-right" to="/">
               View All
-            </a>
+            </Link>
           </div>
           {/* Now Showing Content */}
           <div className="movies-scroll mt-5 mb-5">
@@ -86,9 +87,9 @@ function Home() {
           {/* Header Tittle */}
           <div className="d-flex justify-content-between align-items-center">
             <h2 className="upcoming-movies-tittle-left">Upcoming Movies</h2>
-            <a className="upcoming-movies-tittle-right" href="/">
+            <Link className="upcoming-movies-tittle-right" to="/">
               View All
-            </a>
+            </Link>
           </div>
           {/* Movies Month */}
           <div className="mt-3">
@@ -175,7 +176,7 @@ function Home() {
             <button className="btn btn-primary">Join Now</button>
           </div>
           <p className="text-center p-cta mt-4 mb-4">
-            By joining you as a Tickitz member,
+            By joining you as Link Tickitz member,
             <br />
             we will always send you the latest updates via email .
           </p>
