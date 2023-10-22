@@ -3,7 +3,6 @@ import "../style/detail.css";
 import React from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -14,7 +13,7 @@ function Detail() {
 
   // lifecycle
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     setTimeout(() => {
       axios
         .get("http://localhost:3000/api/movie.json")
