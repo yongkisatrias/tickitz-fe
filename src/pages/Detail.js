@@ -17,7 +17,7 @@ function Detail() {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     setTimeout(() => {
       axios
-        .get("http://localhost:3000/api/movie.json")
+        .get("http://192.168.1.23:3000/api/movie.json")
         .then((response) => {
           if (response.status === 200) {
             // search data from api and compare with id

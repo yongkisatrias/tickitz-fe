@@ -20,7 +20,7 @@ function Home() {
   // lifecycle
   React.useEffect(() => {
     axios
-      .get("http://localhost:3000/api/movie.json")
+      .get("http://192.168.1.23:3000/api/movie.json")
       .then((response) => {
         if (response.status === 200) {
           setResult(response.data);
