@@ -10,7 +10,7 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
 function Detail() {
-  const { id } = useParams();
+  const { slug } = useParams();
   const [detailMovie, setDetailMovie] = React.useState(null);
 
   // lifecycle
@@ -24,7 +24,8 @@ function Detail() {
             // search data from api and compare with id
             setDetailMovie(
               response.data.find(
-                (item) => item.tittle.toLowerCase().split(" ").join("-") === id
+                (item) =>
+                  item.tittle.toLowerCase().split(" ").join("-") === slug
               )
             );
           }

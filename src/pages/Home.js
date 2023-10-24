@@ -127,7 +127,7 @@ function Home() {
           {/* Movies */}
           <div className="movies-scroll mt-5 mb-5">
             {result
-              .filter((item) => item.isShowing === false || true)
+              .filter((item) => item.isShowing === false)
               .filter((item) => item.showingMonth === selectedMonth)
               .slice(0, 5)
               .map((item) => (
