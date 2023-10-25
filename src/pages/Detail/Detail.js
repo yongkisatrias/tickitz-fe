@@ -1,13 +1,13 @@
-import "../style/detail.css";
-import "../style/detail.mobile.css";
+import "./detail.css";
+import "./detail.mobile.css";
 
 import React from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
 
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
+import NavBar from "../../components/NavBar";
+import Footer from "../../components/Footer";
 
 function Detail() {
   const { slug } = useParams();
