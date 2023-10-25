@@ -15,12 +15,20 @@ function NavBar() {
             List Movie
           </Link>
         </div>
-        <button
-          type="button"
-          className="btn btn-primary px-4 btn-sign-up d-desktop"
-        >
-          Sign Up
-        </button>
+        <div className="d-flex align-items-center gap-3">
+          <button
+            type="button"
+            className="btn btn-primary px-4 btn-sign-up d-desktop"
+          >
+            Sign Up
+          </button>
+          <button
+            type="button"
+            className="btn btn-primary px-4 btn-sign-up d-desktop"
+          >
+            Log In
+          </button>
+        </div>
         <button
           className="navbar-toggler d-mobile"
           type="button"
@@ -49,6 +57,11 @@ function NavBar() {
           <li className="nav-item d-flex justify-content-center mt-2 mb-2 navbar-menu">
             <button type="button" className="btn btn-primary btn-sign-up px-4">
               Sign Up
+            </button>
+          </li>
+          <li className="nav-item d-flex justify-content-center mt-2 mb-2 navbar-menu">
+            <button type="button" className="btn btn-primary btn-sign-up px-4">
+              Log In
             </button>
           </li>
         </ul>
