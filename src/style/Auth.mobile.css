@@ -1,0 +1,9 @@
+@media screen and (max-width: 575.98px) {
+  .left-content {
+    display: none;
+  }
+
+  .right-content {
+    height: 100vh;
+  }
+}

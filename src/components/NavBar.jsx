@@ -16,18 +16,22 @@ function NavBar() {
           </Link>
         </div>
         <div className="d-flex align-items-center gap-3">
-          <button
-            type="button"
-            className="btn btn-primary px-4 btn-sign-up d-desktop"
-          >
-            Sign Up
-          </button>
-          <button
-            type="button"
-            className="btn btn-primary px-4 btn-sign-up d-desktop"
-          >
-            Log In
-          </button>
+          <Link to="/register">
+            <button
+              type="button"
+              className="btn btn-primary px-4 btn-sign-up d-desktop"
+            >
+              Sign Up
+            </button>
+          </Link>
+          <Link to="/login">
+            <button
+              type="button"
+              className="btn btn-primary px-4 btn-sign-up d-desktop"
+            >
+              Log In
+            </button>
+          </Link>
         </div>
         <button
           className="navbar-toggler d-mobile"
@@ -55,14 +59,24 @@ function NavBar() {
             </Link>
           </li>
           <li className="nav-item d-flex justify-content-center mt-2 mb-2 navbar-menu">
-            <button type="button" className="btn btn-primary btn-sign-up px-4">
-              Sign Up
-            </button>
+            <Link to="/register">
+              <button
+                type="button"
+                className="btn btn-primary btn-sign-up px-4"
+              >
+                Sign Up
+              </button>
+            </Link>
           </li>
           <li className="nav-item d-flex justify-content-center mt-2 mb-2 navbar-menu">
-            <button type="button" className="btn btn-primary btn-sign-up px-4">
-              Log In
-            </button>
+            <Link to="/login">
+              <button
+                type="button"
+                className="btn btn-primary btn-sign-up px-4"
+              >
+                Log In
+              </button>
+            </Link>
           </li>
         </ul>
       </div>

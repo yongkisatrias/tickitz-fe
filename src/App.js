@@ -11,6 +11,17 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
+<<<<<<< Updated upstream
+=======
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
+  },
+  {
+>>>>>>> Stashed changes
     path: "/detail/:slug",
     element: <Detail />,
   },

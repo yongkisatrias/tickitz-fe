@@ -1,0 +1,84 @@
+/* Font */
+/* font-family: "Inter", sans-serif; */
+/* font-family: 'Mulish', sans-serif; */
+
+#register_page {
+  overflow: hidden;
+}
+
+.left-content {
+  background-image: url("/public/image/hero-image/background-auth.png");
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.left-content p {
+  color: #ffffffcc;
+  font-family: "Inter", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.144px;
+}
+
+.right-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.right-content div h1 {
+  color: #121212;
+  font-family: "Inter", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.144px;
+}
+
+.sign-up-desc {
+  color: #aaa;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.126px;
+}
+
+.bottom-content {
+  color: #8692a6;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.08px;
+}
+
+.sign-in-bottom-content {
+  color: #5f2eea;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.08px;
+  text-decoration: none;
+}
+
+button {
+  color: #f7f7fc;
+  text-align: center;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+}
