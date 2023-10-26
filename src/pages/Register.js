@@ -10,7 +10,9 @@ function Register() {
       <div className="row">
         {/* Left Content */}
         <div className="col-md-7 left-content">
-          <img src="/image/logo/white-logo-tickitz.png" />
+          <Link to="/">
+            <img src="/image/logo/white-logo-tickitz.png" />
+          </Link>
           <p>wait, watch, wow!</p>
         </div>
 
@@ -18,7 +20,7 @@ function Register() {
         <div className="col-md-5 col-sm-12 right-content">
           <div className="container px-5">
             <h1>Sign Up</h1>
-            <p className="sign-up-desc mb-4">Fill your additional details</p>
+            <p className="auth-right-desc mb-4">Fill your additional details</p>
             <div className="mb-4">
               <label className="form-label">Full Name</label>
               <input
@@ -62,7 +64,7 @@ function Register() {
             </div>
             <p className="text-center bottom-content">
               Already have account ?{" "}
-              <Link to="/login" className="sign-in-bottom-content">
+              <Link to="/login" className="auth-bottom-content">
                 Sign In
               </Link>
             </p>
