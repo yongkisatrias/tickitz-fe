@@ -1,5 +1,5 @@
-import "../style/App.css";
-import "../style/app.mobile.css";
+import "./home.css";
+import "./home.mobile.css";
 
 import MovieComp from "../components/Movie";
 import NavBar from "../components/NavBar";
@@ -56,7 +56,7 @@ function Home() {
 
       {/* Start Now Showing */}
       <section id="now-showing">
-        <div className="container pt-7 pb-7">
+        <div className="container pt-5 pb-5">
           {/* Header Tittle */}
           <div className="d-flex justify-content-between align-items-center">
             <h2 className="now-showing-tittle-left">Now Showing</h2>
@@ -83,7 +83,7 @@ function Home() {
       {/* End Now Showing */}
 
       {/* Start Upcoming Movies */}
-      <section id="upcoming-movies" className="mt-7 mb-7">
+      <section id="upcoming-movies" className="mt-5 mb-5">
         <div className="container pt-5 pb-5">
           {/* Header Tittle */}
           <div className="d-flex justify-content-between align-items-center">
@@ -93,7 +93,7 @@ function Home() {
             </Link>
           </div>
           {/* Movies Month */}
-          <div className="mt-3">
+          <div className="mt-3 mb-3">
             <div className="month-scroll">
               {[
                 "January",
@@ -160,7 +160,7 @@ function Home() {
       {/* End Upcoming Movies */}
 
       {/* CTA Start */}
-      <section id="cta" className="mt-5 mb-10">
+      <section id="cta" className="pb-3">
         <div className="container mt-5 mb-5">
           <h3 className="text-muted text-center mt-5">
             Be the vanguard of the
@@ -174,7 +174,7 @@ function Home() {
               placeholder="Type your email here.."
               style={{ width: "306px" }}
             />
-            <button className="btn btn-primary">Join Now</button>
+            <button className="btn btn-auth">Join Now</button>
           </div>
           <p className="text-center p-cta mt-4 mb-4">
             By joining you as Link Tickitz member,
