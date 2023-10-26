@@ -28,7 +28,7 @@ function Movie(props) {
         style={{ textDecoration: "none" }}
       >
         <div className="d-grid">
-          <button className="btn-details mt-2 p-2">Details</button>
+          <button className="btn btn-details mt-2 p-2">Details</button>
         </div>
       </Link>
     </div>

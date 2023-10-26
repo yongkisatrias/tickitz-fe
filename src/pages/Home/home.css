@@ -18,18 +18,9 @@
   padding-bottom: 70px;
 }
 
-.navbar-menu {
-  font-family: "Mulish", sans-serif;
-  color: #414141;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  letter-spacing: 0.08px;
-  text-decoration: none;
-}
-
 .btn-auth {
+  background-color: #5f2eea;
+  border-color: #5f2eea;
   font-family: "Mulish", sans-serif;
   color: #f7f7fc;
   font-size: 14px;
@@ -39,14 +30,10 @@
   letter-spacing: 0.75px;
 }
 
-.btn-primary {
-  background-color: #5f2eea;
-  border-color: #5f2eea;
-}
-
-.btn-primary:hover {
+.btn-auth:hover {
   background-color: #592fce;
   border-color: #592fce;
+  color: #f7f7fc;
 }
 
 header section div div .text-muted {
@@ -132,6 +119,11 @@ header section div div .text-muted {
   text-decoration: none;
 }
 
+.btn-primary {
+  background-color: #5f2eea;
+  border-color: #5f2eea;
+}
+
 .movie-tittle {
   color: #14142b;
   text-align: center;
@@ -175,10 +167,20 @@ header section div div .text-muted {
   color: #fff;
 }
 
+#cta div .text-muted {
+  color: #4e4b66;
+  text-align: center;
+  font-family: "Mulish", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114%;
+  letter-spacing: 0.25px;
+}
+
 .p-cta {
   color: #6e7191;
   text-align: center;
-  font-feature-settings: "clig" off, "liga" off;
   font-family: "Mulish", sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -234,7 +236,6 @@ header section div div .text-muted {
   justify-content: center;
   overflow-x: scroll;
   gap: 40px;
-  transition: 0.5s;
 }
 
 .month-scroll {
@@ -242,12 +243,12 @@ header section div div .text-muted {
   justify-content: center;
   overflow-x: scroll;
   gap: 11px;
-  transition: 0.5s;
 }
 
 .movies-scroll::-webkit-scrollbar {
   display: none;
 }
+
 .month-scroll::-webkit-scrollbar {
   display: none;
 }

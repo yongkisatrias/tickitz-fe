@@ -1,0 +1,14 @@
+/* Font */
+/* font-family: 'Mulish', sans-serif; */
+/* font-family: 'Open Sans', sans-serif; */
+
+.navbar-menu {
+  font-family: "Mulish", sans-serif;
+  color: #414141;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.08px;
+  text-decoration: none;
+}

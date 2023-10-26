@@ -6,7 +6,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
 
-import NavBar from "../../components/NavBar";
+import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer";
 
 function Detail() {
