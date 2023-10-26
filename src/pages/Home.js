@@ -1,9 +1,9 @@
-import "./home.css";
-import "./home.mobile.css";
+import "../style/App.css";
+import "../style/App.mobile.css";
 
-import MovieComp from "../../components/Movie.jsx";
-import NavBar from "../../components/NavBar/NavBar";
-import Footer from "../../components/Footer";
+import MovieComp from "../components/Movie";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
