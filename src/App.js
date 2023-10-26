@@ -3,6 +3,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 // list pages
 const router = createBrowserRouter([
@@ -11,8 +13,6 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-<<<<<<< Updated upstream
-=======
     path: "/login",
     element: <Login />,
   },
@@ -21,7 +21,6 @@ const router = createBrowserRouter([
     element: <Register />,
   },
   {
->>>>>>> Stashed changes
     path: "/detail/:slug",
     element: <Detail />,
   },
