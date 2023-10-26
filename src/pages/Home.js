@@ -1,5 +1,5 @@
-import "./home.css";
-import "./home.mobile.css";
+import "../style/App.css";
+import "../style/App.mobile.css";
 
 import MovieComp from "../components/Movie";
 import NavBar from "../components/NavBar";
