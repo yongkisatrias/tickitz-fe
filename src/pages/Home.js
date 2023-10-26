@@ -1,7 +1,7 @@
 import "../style/App.css";
 import "../style/app.mobile.css";
 
-import MovieComp from "../components/Movie.jsx";
+import MovieComp from "../components/Movie";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import React from "react";

@@ -18,13 +18,13 @@ function NavBar() {
         <div className="d-flex align-items-center gap-3">
           <button
             type="button"
-            className="btn btn-primary px-4 btn-sign-up d-desktop"
+            className="btn btn-primary px-4 btn-auth d-desktop"
           >
             Sign Up
           </button>
           <button
             type="button"
-            className="btn btn-primary px-4 btn-sign-up d-desktop"
+            className="btn btn-primary px-4 btn-auth d-desktop"
           >
             Log In
           </button>
@@ -55,12 +55,12 @@ function NavBar() {
             </Link>
           </li>
           <li className="nav-item d-flex justify-content-center mt-2 mb-2 navbar-menu">
-            <button type="button" className="btn btn-primary btn-sign-up px-4">
+            <button type="button" className="btn btn-primary btn-auth px-4">
               Sign Up
             </button>
           </li>
           <li className="nav-item d-flex justify-content-center mt-2 mb-2 navbar-menu">
-            <button type="button" className="btn btn-primary btn-sign-up px-4">
+            <button type="button" className="btn btn-primary btn-auth px-4">
               Log In
             </button>
           </li>
