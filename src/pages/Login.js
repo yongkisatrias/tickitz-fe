@@ -10,7 +10,7 @@ function Login() {
         {/* Left Content */}
         <div className="col-md-7 left-content">
           <Link to="/">
-            <img src="/image/logo/white-logo-tickitz.png" />
+            <img src="/image/logo/white-logo-tickitz.png" alt="tickitz logo" />
           </Link>
           <p>wait, watch, wow!</p>
         </div>
