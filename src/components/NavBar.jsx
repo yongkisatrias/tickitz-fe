@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function NavBar() {
+  const [profile, setProfile] = React.useState(
+    JSON.parse(localStorage.getItem("profile"))
+  );
+
   return (
     <>
       {/* Navigation Bar */}
@@ -15,18 +19,30 @@ function NavBar() {
             List Movie
           </Link>
         </div>
-        <div className="d-flex align-items-center gap-3">
-          <Link to="/register">
-            <button type="button" className="btn px-4 btn-auth d-desktop">
-              Sign Up
-            </button>
-          </Link>
-          <Link to="/login">
-            <button type="button" className="btn px-4 btn-auth d-desktop">
-              Log In
-            </button>
-          </Link>
-        </div>
+
+        {profile ? (
+          <img
+            className="d-desktop"
+            src={profile?.photo}
+            width="50px"
+            height="50px"
+            style={{ background: "#CDCDCD", borderRadius: "50%" }}
+          />
+        ) : (
+          <div className="d-flex align-items-center gap-3">
+            <Link to="/register">
+              <button type="button" className="btn px-4 btn-auth d-desktop">
+                Sign Up
+              </button>
+            </Link>
+            <Link to="/login">
+              <button type="button" className="btn px-4 btn-auth d-desktop">
+                Log In
+              </button>
+            </Link>
+          </div>
+        )}
+
         <button
           className="navbar-toggler d-mobile"
           type="button"
