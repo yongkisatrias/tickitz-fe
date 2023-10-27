@@ -93,7 +93,7 @@ function Home() {
             </Link>
           </div>
           {/* Movies Month */}
-          <div className="mt-3 mb-3">
+          <div className="mt-2">
             <div className="month-scroll">
               {[
                 "January",
@@ -112,8 +112,8 @@ function Home() {
                 <button
                   className={
                     selectedMonth === item.toLowerCase()
-                      ? "btn btn-primary px-4"
-                      : "btn btn-details px-4"
+                      ? "btn btn-primary-movies-month px-4"
+                      : "btn btn-details-movies-month px-4"
                   }
                   onClick={() => {
                     setSelectedMonth(item.toLowerCase());
@@ -125,7 +125,7 @@ function Home() {
             </div>
           </div>
           {/* Movies */}
-          <div className="movies-scroll mt-5 mb-5">
+          <div className="movies-scroll mt-4 mb-4">
             {result
               .filter((item) => item.isShowing === false)
               .filter((item) => item.showingMonth === selectedMonth)

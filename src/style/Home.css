@@ -53,7 +53,7 @@ header section div div .text-primary {
   background-color: #f5f6f8;
 }
 
-.now-showing-tittle-left {
+#now-showing div div .now-showing-tittle-left {
   color: #5f2eea;
   font-family: "Mulish", sans-serif;
   font-size: 24px;
@@ -62,7 +62,7 @@ header section div div .text-primary {
   line-height: normal;
 }
 
-.now-showing-tittle-right {
+#now-showing div div .now-showing-tittle-right {
   color: #5f2eea;
   text-align: right;
   font-family: "Mulish", sans-serif;
@@ -140,7 +140,7 @@ header section div div .text-primary {
 }
 
 .btn-details {
-  border-radius: 4px;
+  border-radius: 5px;
   border: 1px solid #5f2eea;
   color: #5f2eea;
   background-color: #fff;
@@ -154,6 +154,43 @@ header section div div .text-primary {
 
 .btn-details:hover {
   background-color: #5f2eea;
+  color: #fff;
+}
+
+.btn-details-movies-month {
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #5f2eea;
+  color: #5f2eea;
+  text-align: center;
+  font-family: "Mulish", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.btn-details-movies-month:hover {
+  background-color: #5f2eea;
+  color: #fff;
+}
+
+.btn-primary-movies-month {
+  height: 40px;
+  border-radius: 4px;
+  background: #5f2eea;
+  color: #fff;
+  text-align: center;
+  font-family: Mulish;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.btn-primary-movies-month:hover {
+  background-color: #592fce;
+  border-color: #592fce;
   color: #fff;
 }
 
@@ -224,11 +261,6 @@ header section div div .text-primary {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.5px;
-}
-
-.d-mobile {
-  visibility: hidden;
-  display: none;
 }
 
 .movies-scroll {

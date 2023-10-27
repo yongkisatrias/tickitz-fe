@@ -27,3 +27,8 @@
   background-color: #592fce;
   border-color: #592fce;
 }
+
+.d-mobile {
+  visibility: hidden;
+  display: none;
+}
