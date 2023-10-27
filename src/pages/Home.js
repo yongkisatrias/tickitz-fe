@@ -1,5 +1,5 @@
-import "../style/App.css";
-import "../style/App.mobile.css";
+import "../style/Home.css";
+import "../style/Home.mobile.css";
 
 import MovieComp from "../components/Movie";
 import NavBar from "../components/NavBar";
@@ -174,7 +174,7 @@ function Home() {
               placeholder="Type your email here.."
               style={{ width: "306px" }}
             />
-            <button className="btn btn-auth">Join Now</button>
+            <button className="btn btn-primary">Join Now</button>
           </div>
           <p className="text-center p-cta mt-4 mb-4">
             By joining you as Link Tickitz member,

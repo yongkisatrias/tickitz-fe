@@ -1,0 +1,253 @@
+/* Font */
+/* font-family: 'Mulish', sans-serif; */
+/* font-family: 'Open Sans', sans-serif; */
+
+.navbar-menu {
+  font-family: "Mulish", sans-serif;
+  color: #414141;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.08px;
+  text-decoration: none;
+}
+
+.btn-auth {
+  background-color: #5f2eea;
+  border-color: #5f2eea;
+  font-family: "Mulish", sans-serif;
+  color: #f7f7fc;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+}
+
+.btn-auth:hover {
+  color: #f7f7fc;
+  background-color: #592fce;
+  border-color: #592fce;
+}
+
+header section div div .text-muted {
+  color: #a0a3bd !important;
+  font-family: "Mulish", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+header section div div .text-primary {
+  color: #5f2eea !important;
+  font-family: "Mulish", sans-serif;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#now-showing {
+  background-color: #f5f6f8;
+}
+
+.now-showing-tittle-left {
+  color: #5f2eea;
+  font-family: "Mulish", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.now-showing-tittle-right {
+  color: #5f2eea;
+  text-align: right;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.15px;
+  text-decoration: none;
+}
+
+.movie-poster {
+  cursor: pointer;
+  width: 225px;
+  height: 300px;
+}
+
+.movie-poster img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.single-text {
+  display: -webkit-box;
+  max-width: 225px;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.upcoming-movies-tittle-left {
+  color: #14142b;
+  font-family: "Mulish", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.upcoming-movies-tittle-right {
+  color: #5f2eea;
+  text-align: right;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.15px;
+  text-decoration: none;
+}
+
+.movie-tittle {
+  color: #14142b;
+  text-align: center;
+  font-family: "Mulish", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22.5px;
+  letter-spacing: 0.15px;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.movie-genres {
+  color: #a0a3bd;
+  text-align: center;
+  font-family: "Mulish", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+}
+
+.btn-details {
+  border-radius: 4px;
+  border: 1px solid #5f2eea;
+  color: #5f2eea;
+  background-color: #fff;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.btn-details:hover {
+  background-color: #5f2eea;
+  color: #fff;
+}
+
+#cta div .text-muted {
+  color: #4e4b66 !important;
+  text-align: center;
+  font-family: "Mulish", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114%;
+  letter-spacing: 0.25px;
+}
+
+#cta div .text-primary {
+  color: #5f2eea !important;
+  font-family: "Mulish", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 114%;
+}
+
+.p-cta {
+  color: #6e7191;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+}
+
+.explore a {
+  text-decoration: none;
+  display: block;
+  color: #4e4b66;
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.5px;
+}
+
+.social-media a {
+  text-decoration: none;
+  color: #6e7191;
+}
+
+.tickets-footer-motto {
+  color: #6e7191;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.75px;
+}
+
+.copyright {
+  color: #4e4b66;
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.5px;
+}
+
+.d-mobile {
+  visibility: hidden;
+  display: none;
+}
+
+.movies-scroll {
+  display: flex;
+  justify-content: center;
+  overflow-x: scroll;
+  gap: 40px;
+}
+
+.month-scroll {
+  display: flex;
+  justify-content: center;
+  overflow-x: scroll;
+  gap: 10px;
+}
+
+.movies-scroll::-webkit-scrollbar {
+  display: none;
+}
+.month-scroll::-webkit-scrollbar {
+  display: none;
+}

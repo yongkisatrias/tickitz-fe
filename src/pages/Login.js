@@ -27,7 +27,6 @@ function Login() {
               <input
                 type="email"
                 className="form-control form-control-lg"
-                id="exampleFormControlInput1"
                 placeholder="Write your email"
               />
             </div>
@@ -36,7 +35,6 @@ function Login() {
               <input
                 type="password"
                 className="form-control form-control-lg"
-                id="exampleFormControlInput1"
                 placeholder="Write your password"
               />
             </div>
