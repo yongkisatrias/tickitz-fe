@@ -90,6 +90,7 @@ function Home() {
                 tittle={item.tittle}
                 genres={item.genres}
                 desc={item.desc}
+                slug={item.slug}
               />
             ))}
           </div>
@@ -150,6 +151,7 @@ function Home() {
                   tittle={item.tittle}
                   genres={item.genres}
                   desc={item.desc}
+                  slug={item.slug}
                 />
               ))}
           </div>

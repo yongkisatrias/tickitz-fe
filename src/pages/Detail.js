@@ -16,22 +16,15 @@ function Detail() {
   // lifecycle
   React.useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-    setTimeout(() => {
-      axios
-        .get("http://192.168.1.23:3000/api/movie.json")
-        .then((response) => {
-          if (response.status === 200) {
-            // search data from api and compare with id
-            setDetailMovie(
-              response.data.find(
-                (item) =>
-                  item.tittle.toLowerCase().split(" ").join("-") === slug
-              )
-            );
-          }
-        })
-        .catch((error) => console.log(`error: ${error}`));
-    }, 1000);
+    axios
+      .get(`https://tickitz-be.onrender.com/yongki/movie/detail/${slug}`)
+      .then((response) => {
+        if (response.data.data.length > 0) {
+          // Get data from response API and access response array index 0
+          setDetailMovie(response.data.data[0]);
+        }
+      })
+      .catch((error) => console.log(`error: ${error}`));
   }, []);
 
   return (

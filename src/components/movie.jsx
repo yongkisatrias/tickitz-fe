@@ -2,14 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Movie(props) {
-  const { poster, tittle, genres } = props;
+  const { poster, tittle, genres, slug } = props;
 
   return (
     <div>
-      <Link
-        to={`/detail/${tittle.toLowerCase().split(" ").join("-")}`}
-        style={{ textDecoration: "none" }}
-      >
+      <Link to={`/detail/${slug}`} style={{ textDecoration: "none" }}>
         <img
           className="movie-poster"
           width={"100%"}
@@ -23,10 +20,7 @@ function Movie(props) {
           <span>{genres.length - 1 === key ? item : `${item}, `}</span>
         ))}
       </h5>
-      <Link
-        to={`/detail/${tittle.toLowerCase().split(" ").join("-")}`}
-        style={{ textDecoration: "none" }}
-      >
+      <Link to={`/detail/${slug}`} style={{ textDecoration: "none" }}>
         <div className="d-grid">
           <button className="btn btn-details mt-2 p-2">Details</button>
         </div>
