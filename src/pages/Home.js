@@ -14,19 +14,37 @@ function Home() {
   const date = new Date();
   const month = date.toLocaleDateString("default", { month: "long" });
 
-  const [result, setResult] = React.useState([]);
+  const [resultNowShowing, setResultNowShowing] = React.useState([]);
+  const [resultUpcoming, setResultUpcoming] = React.useState([]);
   const [selectedMonth, setSelectedMonth] = React.useState(month.toLowerCase());
 
   // lifecycle
+  const handleGetResponse = async () => {
+    try {
+      // Get data from Now Showing
+      const nowShowing = await axios.get(
+        "https://tickitz-be.onrender.com/yongki/movie/now-showing"
+      );
+
+      if (nowShowing.status === 200) {
+        setResultNowShowing(nowShowing.data.data);
+      }
+
+      // Get data from Upcoming
+      const upcoming = await axios.get(
+        "https://tickitz-be.onrender.com/yongki/movie/upcoming"
+      );
+
+      if (upcoming.status === 200) {
+        setResultUpcoming(upcoming.data.data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   React.useEffect(() => {
-    axios
-      .get("http://192.168.1.23:3000/api/movie.json")
-      .then((response) => {
-        if (response.status === 200) {
-          setResult(response.data);
-        }
-      })
-      .catch((error) => console.log(`error: ${error}`));
+    handleGetResponse();
   }, []);
 
   return (
@@ -66,17 +84,14 @@ function Home() {
           </div>
           {/* Now Showing Content */}
           <div className="movies-scroll mt-5 mb-5">
-            {result
-              .filter((item) => item.isShowing === true)
-              .slice(0, 5)
-              .map((item) => (
-                <MovieComp
-                  poster={item.poster}
-                  tittle={item.tittle}
-                  genres={item.genres}
-                  desc={item.desc}
-                />
-              ))}
+            {resultNowShowing.slice(0, 5).map((item) => (
+              <MovieComp
+                poster={item.poster}
+                tittle={item.tittle}
+                genres={item.genres}
+                desc={item.desc}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -126,8 +141,7 @@ function Home() {
           </div>
           {/* Movies */}
           <div className="movies-scroll mt-4 mb-4">
-            {result
-              .filter((item) => item.isShowing === false)
+            {resultUpcoming
               .filter((item) => item.showingMonth === selectedMonth)
               .slice(0, 5)
               .map((item) => (
@@ -140,10 +154,8 @@ function Home() {
               ))}
           </div>
           {/* Not Found Movie */}
-          {result
-            .filter((item) => item.isShowing === false || true)
-            .filter((item) => item.showingMonth === selectedMonth).length ===
-          0 ? (
+          {resultUpcoming.filter((item) => item.showingMonth === selectedMonth)
+            .length === 0 ? (
             <div className="text-center">
               <img
                 style={{
