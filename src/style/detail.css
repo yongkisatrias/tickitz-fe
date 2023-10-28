@@ -122,3 +122,76 @@
   line-height: 32px;
   letter-spacing: 0.75px;
 }
+
+#cinemas {
+  background: #f5f6f8;
+}
+
+.card-cinemas {
+  border-radius: 8px;
+  background: #fff;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.card-cinemas div {
+  padding-top: 10px;
+}
+
+.card-cinemas div img {
+  width: 147px;
+  height: 59px;
+}
+
+.cinema-tittle {
+  color: #000;
+  font-family: "Mulish", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0.75px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.cinema-address {
+  color: #6e7191;
+  font-family: "Mulish", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 18px;
+  letter-spacing: 0.75px;
+}
+
+.showtime-schedule {
+  color: #4e4b66;
+  font-family: "Mulish", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 23px;
+  letter-spacing: 0.75px;
+  padding-top: 0 !important;
+}
+
+.price {
+  color: #6b6b6b;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.75px;
+}
+
+.seat-price {
+  color: #000;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 0.75px;
+}

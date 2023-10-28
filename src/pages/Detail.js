@@ -12,19 +12,35 @@ import Footer from "../components/Footer";
 function Detail() {
   const { slug } = useParams();
   const [detailMovie, setDetailMovie] = React.useState(null);
+  const [listCinemas, setListCinemas] = React.useState([]);
 
   // lifecycle
+  const handleGetApi = async () => {
+    try {
+      // Get Detail Movie
+      const requestDetail = await axios.get(
+        `https://tickitz-be.onrender.com/yongki/movie/detail/${slug}`
+      );
+
+      if (requestDetail.data.data.length > 0) {
+        // Get data from response API and access response array index 0
+        setDetailMovie(requestDetail.data.data[0]);
+      }
+
+      // Get Detail Cinema
+      const requestCinema = await axios.get(
+        `https://tickitz-be.onrender.com/yongki/movie/${slug}/cinemas`
+      );
+
+      if (requestCinema.data.data.length > 0) {
+        setListCinemas(requestCinema.data.data);
+      }
+    } catch (error) {}
+  };
+
   React.useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-    axios
-      .get(`https://tickitz-be.onrender.com/yongki/movie/detail/${slug}`)
-      .then((response) => {
-        if (response.data.data.length > 0) {
-          // Get data from response API and access response array index 0
-          setDetailMovie(response.data.data[0]);
-        }
-      })
-      .catch((error) => console.log(`error: ${error}`));
+    handleGetApi();
   }, []);
 
   return (
@@ -116,6 +132,50 @@ function Detail() {
           {/* End Content */}
         </>
       ) : null}
+
+      {/* Start Cinema */}
+      <section id="cinemas" className="mt-4">
+        <div className="container">
+          <h3 className="text-center py-4">Showtimes and Tickets</h3>
+          <div className="row">
+            {listCinemas.map((item) => (
+              <div className="col col-md-4 col-sm-12">
+                <div className="card-cinemas mb-5">
+                  {/* Top Content */}
+                  <div className="d-flex gap-3 px-3">
+                    <img
+                      src={item.logo}
+                      alt="cinemas logo"
+                      className="mt-3 px-2 py-2"
+                    />
+                    <div>
+                      <h4 className="cinema-tittle">{item.name}</h4>
+                      <p className="cinema-address">{item.address}</p>
+                    </div>
+                  </div>
+                  <hr className="mt-2" />
+                  {/* Bottom Content */}
+                  <div className="d-flex justify-content-between gap-3 px-4 showtime-schedule">
+                    {item.movieStart.map((nestedItem) => (
+                      <span>{nestedItem} WIB</span>
+                    ))}
+                  </div>
+                  <div className="d-flex justify-content-between px-4 py-3">
+                    <span className="price">Price</span>
+                    <span className="seat-price">
+                      Rp.{item.priceDisplay}/seat
+                    </span>
+                  </div>
+                  <div className="d-grid px-4 py-3">
+                    <button className="btn btn-primary">Book Now</button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* End Cinema */}
 
       {/* Start Footer */}
       <Footer />
