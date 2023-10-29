@@ -5,6 +5,7 @@ import React from "react";
 import axios from "axios";
 import moment from "moment/moment";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
+import swal from "sweetalert";
 import ScrollToTop from "react-scroll-to-top";
 
 import NavBar from "../components/NavBar";
@@ -98,7 +99,13 @@ function ChooseSeat() {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     // Handle only if already login
     if (!localStorage.getItem("token") && !localStorage.getItem("profile")) {
-      if (window.confirm("Silahkan login terlebih dahulu")) {
+      if (
+        window.swal(
+          "Access Denied",
+          "You must login first before booking movies in cinema!",
+          "warning"
+        )
+      ) {
         navigate("/");
       }
     }
