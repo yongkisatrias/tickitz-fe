@@ -9,160 +9,8 @@ import ScrollToTop from "react-scroll-to-top";
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-
-function RowSeat({ position, selectedSeat, setSelectedSeat, bookedSeat }) {
-  const getSeatColor = (key) => {
-    if (bookedSeat?.find((_item) => _item === `${position}${key}`)) {
-      return "#6E7191"; // booked
-    } else if (selectedSeat?.find((_item) => _item === `${position}${key}`)) {
-      return "#5F2EEA"; // ungu
-    } else {
-      return "#D6D8E7"; // gray
-    }
-  };
-
-  const checkIfDisabled = (key) => {
-    if (bookedSeat?.find((_item) => _item === `${position}${key}`)) {
-      return true; // booked
-    } else if (selectedSeat?.find((_item) => _item === `${position}${key}`)) {
-      return true; // ungu
-    } else {
-      return false; // gray
-    }
-  };
-
-  return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        marginTop: "20px",
-      }}
-    >
-      <p>{position}</p>
-      {/* left */}
-      <div
-        style={{
-          display: "flex",
-          width: "40%",
-          justifyContent: "space-between",
-        }}
-      >
-        {[...new Array(7)].map((item, key) => {
-          const nextKey = ++key;
-
-          return (
-            <div
-              style={{
-                background: getSeatColor(nextKey),
-                borderRadius: "5px",
-                width: "25px",
-                height: "25px",
-                cursor: "pointer",
-              }}
-              onClick={() => {
-                if (!checkIfDisabled(nextKey)) {
-                  setSelectedSeat([
-                    ...selectedSeat,
-                    ...[`${position}${nextKey}`],
-                  ]);
-                }
-              }}
-            ></div>
-          );
-        })}
-      </div>
-      {/* right */}
-      <div
-        style={{
-          display: "flex",
-          width: "40%",
-          justifyContent: "space-between",
-        }}
-      >
-        {[...new Array(7)].map((item, key) => {
-          const keyPage2 = ++key + 7;
-
-          return (
-            <div
-              style={{
-                background: getSeatColor(keyPage2),
-                borderRadius: "5px",
-                width: "25px",
-                height: "25px",
-                cursor: "pointer",
-              }}
-              onClick={() => {
-                if (!checkIfDisabled(keyPage2)) {
-                  setSelectedSeat([
-                    ...selectedSeat,
-                    ...[`${position}${keyPage2}`],
-                  ]);
-                }
-              }}
-            />
-          );
-        })}
-      </div>
-    </div>
-  );
-}
-
-function RowSeatNumber() {
-  return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        marginTop: "20px",
-      }}
-    >
-      <p></p>
-      {/* left */}
-      <div
-        style={{
-          display: "flex",
-          width: "40%",
-          justifyContent: "space-between",
-        }}
-      >
-        {[...new Array(7)].map((item, key) => (
-          <div
-            style={{
-              width: "25px",
-              height: "25px",
-            }}
-          >
-            <p>{1 + key}</p>
-          </div>
-        ))}
-      </div>
-      {/* right */}
-      <div
-        style={{
-          display: "flex",
-          width: "40%",
-          justifyContent: "space-between",
-        }}
-      >
-        {[...new Array(7)].map((item, key) => {
-          const nextKey = key + 8;
-
-          return (
-            <div
-              style={{
-                width: "25px",
-                height: "25px",
-              }}
-            >
-              <p>{nextKey}</p>
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
+import RowSeat from "../components/RowSeat";
+import RowSeatNumber from "../components/RowSeatNumber";
 
 function ChooseSeat() {
   const {
@@ -259,63 +107,32 @@ function ChooseSeat() {
   }, []);
 
   return (
-    <div id="choose_seat_page">
-      {/* Navbar */}
-      <div className="container py-4">
+    <div>
+      {/* Start Header */}
+      <header className="container pt-4 pb-4">
+        {/* Navigation Bar */}
         <NavBar />
-      </div>
+      </header>
+      {/* End Header */}
+
       {/* Content */}
-      <div className="pt-5" style={{ background: "#F5F6F8" }}>
+      <div id="choose-seat" className="py-5">
         <div className="container">
           <div className="row">
-            <div className="col col-md-8">
+            <div className="col col-md-8 col-sm-12">
               <section id="content">
                 {/* Movie Selected */}
-                <h2
-                  className="mb-3"
-                  style={{ fontSize: "24px", fontWeight: "bolder" }}
-                >
-                  Movie Selected
-                </h2>
-                <div
-                  style={{
-                    backgroundColor: "#fff",
-                    borderRadius: "10px",
-                    padding: "20px",
-                    marginBottom: "30px",
-                  }}
-                >
-                  <h3 style={{ fontSize: "24px" }}>{movieTitle}</h3>
+                <h2 className="movie-selected mb-4">Movie Selected</h2>
+                {/* Movie Title */}
+                <div className="movie-tittle-card px-5 py-3">
+                  <h2>{movieTitle}</h2>
                 </div>
-
                 {/* Choose Your Seat */}
-                <h2
-                  className="mb-3"
-                  style={{ fontSize: "24px", fontWeight: "bolder" }}
-                >
-                  Choose Your Seat
-                </h2>
-                <div
-                  style={{
-                    backgroundColor: "#fff",
-                    borderRadius: "10px",
-                    padding: "100px 200px 100px 200px",
-                    marginBottom: "30px",
-                  }}
-                >
+                <h2 className="choose-your-seat mt-4 mb-4">Choose Your Seat</h2>
+                <div className="choose-seat">
                   {/* screen */}
-                  <p className="text-center" style={{ marginLeft: "10%" }}>
-                    Screen
-                  </p>
-                  <div
-                    style={{
-                      backgroundColor: "#D6D8E7",
-                      width: "90%",
-                      height: "25px",
-                      borderRadius: "10px",
-                      marginLeft: "10%",
-                    }}
-                  />
+                  <p className="text-center">Screen</p>
+                  <div className="screen" />
 
                   {/* row seat a */}
                   <RowSeat

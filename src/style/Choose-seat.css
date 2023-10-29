@@ -43,7 +43,7 @@
 .choose-seat {
   border-radius: 6px;
   background: #fff;
-  padding: 100px;
+  padding: 100px 150px;
 }
 
 .choose-seat > p {
@@ -54,13 +54,14 @@
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0.75px;
-  margin-bottom: 0;
+  margin-bottom: 5px;
+  margin-left: 10%;
 }
 
 .screen {
   /* width: 532px; */
   width: 90%;
-  height: 15px;
+  height: 10px;
   flex-shrink: 0;
   border-radius: 4px;
   background: #d6d8e7;
