@@ -3,13 +3,14 @@ import "../style/Detail.mobile.css";
 
 import React from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
 function Detail() {
+  const navigate = useNavigate();
   const { slug } = useParams();
   const [detailMovie, setDetailMovie] = React.useState(null);
   const [listCinemas, setListCinemas] = React.useState([]);
@@ -134,7 +135,7 @@ function Detail() {
       ) : null}
 
       {/* Start Cinema */}
-      <section id="cinemas" className="mt-4">
+      <section id="cinemas" className="mt-5">
         <div className="container">
           <h3 className="text-center py-4">Showtimes and Tickets</h3>
           <div className="row">
@@ -167,7 +168,14 @@ function Detail() {
                     </span>
                   </div>
                   <div className="d-grid px-4 py-3">
-                    <button className="btn btn-primary">Book Now</button>
+                    <button
+                      className="btn btn-primary"
+                      onClick={() => {
+                        navigate(`/choose-seat/${slug}`);
+                      }}
+                    >
+                      Book Now
+                    </button>
                   </div>
                 </div>
               </div>

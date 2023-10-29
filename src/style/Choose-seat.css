@@ -1,0 +1,66 @@
+/* Font */
+/* font-family: 'Mulish', sans-serif; */
+
+#choose-seat {
+  background-color: #f5f6f8;
+}
+
+.movie-selected {
+  color: #14142b;
+  font-family: "Mulish", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.25px;
+}
+
+.movie-tittle-card {
+  border-radius: 6px;
+  background: #fff;
+}
+
+.movie-tittle-card h2 {
+  color: #000;
+  font-family: "Mulish", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.25px;
+}
+
+.choose-your-seat {
+  color: #14142b;
+  font-family: "Mulish", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.25px;
+}
+
+.choose-seat {
+  border-radius: 6px;
+  background: #fff;
+}
+
+.choose-seat > p {
+  color: #4e4b66;
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  margin-bottom: 0;
+}
+
+.screen {
+  width: 532px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: #d6d8e7;
+  margin-left: 20%;
+}
