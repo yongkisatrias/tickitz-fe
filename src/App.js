@@ -10,12 +10,17 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ChooseSeat from "./pages/ChooseSeat";
 import ForgotPassword from "./pages/Forgot-Password";
+import ViewAllUpcoming from "./pages/ViewAllUpcoming";
 
 // list pages
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/view-all-upcoming-movies",
+    element: <ViewAllUpcoming />,
   },
   {
     path: "/login",

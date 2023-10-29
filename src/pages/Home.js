@@ -104,7 +104,10 @@ function Home() {
           {/* Header Tittle */}
           <div className="d-flex justify-content-between align-items-center">
             <h2 className="upcoming-movies-tittle-left">Upcoming Movies</h2>
-            <Link className="upcoming-movies-tittle-right" to="/">
+            <Link
+              className="upcoming-movies-tittle-right"
+              to="/view-all-upcoming-movies"
+            >
               View All
             </Link>
           </div>
