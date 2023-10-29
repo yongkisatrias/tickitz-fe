@@ -23,6 +23,7 @@ function NavBar() {
         {profile ? (
           <img
             className="d-desktop"
+            alt="profile picture"
             src={profile?.photo}
             width="50px"
             height="50px"

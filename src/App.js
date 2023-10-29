@@ -9,6 +9,7 @@ import Detail from "./pages/Detail";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ChooseSeat from "./pages/ChooseSeat";
+import ForgotPassword from "./pages/Forgot-Password";
 
 // list pages
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <Register />,
+  },
+  {
+    path: "/forgot-password",
+    element: <ForgotPassword />,
   },
   {
     path: "/detail/:slug",
