@@ -14,6 +14,8 @@ function Detail() {
   const { slug } = useParams();
   const [detailMovie, setDetailMovie] = React.useState(null);
   const [listCinemas, setListCinemas] = React.useState([]);
+  const [dateMovie, setDateMovie] = React.useState(null);
+  const [timeMovie, setTimeMovie] = React.useState(null);
 
   // lifecycle
   const handleGetApi = async () => {
@@ -63,126 +65,161 @@ function Detail() {
       </header>
       {/* End Header */}
 
+      {/* Start Content */}
       {detailMovie !== null ? (
-        <>
-          {/* Start Content */}
-          <section id="content_detail" className="container mt-4 mb-4">
-            <div className="row gap-5 justify-content-center-mobile">
-              <div className="col-md-4 col-sm-12 border-image-detail">
-                <img
-                  className="movie-poster-detail"
-                  src={detailMovie.poster}
-                  alt="movie poster"
-                  width={"100%"}
-                />
+        <section id="content_detail" className="container mt-4 mb-4">
+          <div className="row gap-5 justify-content-center-mobile">
+            <div className="col-md-4 col-sm-12 border-image-detail">
+              <img
+                className="movie-poster-detail"
+                src={detailMovie.poster}
+                alt="movie poster"
+                width={"100%"}
+              />
+            </div>
+            <div className="col-md-8 col-sm-12">
+              <h2>{detailMovie.tittle}</h2>
+              <p className="genres">
+                {detailMovie.genres.map((item, key) => (
+                  <span>
+                    {detailMovie.genres.length - 1 === key ? item : `${item}, `}
+                  </span>
+                ))}
+              </p>
+              <div className="row">
+                <div className="col-md-3 col-sm-12">
+                  {/* realease date */}
+                  <div>
+                    <p className="text-muted text-content">Release date</p>
+                    <p>{detailMovie.release}</p>
+                  </div>
+                  {/* duration */}
+                  <div>
+                    <p className="text-muted text-content">Duration</p>
+                    <p>{detailMovie.duration}</p>
+                  </div>
+                </div>
+                <div className="col-md-9 col-sm-12">
+                  {/* directed by */}
+                  <div>
+                    <p className="text-muted text-content">Directed by</p>
+                    <p>{detailMovie.director}</p>
+                  </div>
+                  {/* casts */}
+                  <div>
+                    <p className="text-muted text-content">Casts</p>
+                    <p>
+                      {detailMovie.cast.map((item, key) => (
+                        <span>
+                          {detailMovie.cast.length - 1 === key
+                            ? item
+                            : `${item}, `}
+                        </span>
+                      ))}
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="col-md-8 col-sm-12">
-                <h2>{detailMovie.tittle}</h2>
-                <p className="genres">
-                  {detailMovie.genres.map((item, key) => (
-                    <span>
-                      {detailMovie.genres.length - 1 === key
-                        ? item
-                        : `${item}, `}
-                    </span>
-                  ))}
-                </p>
-                <div className="row">
-                  <div className="col-md-3 col-sm-12">
-                    {/* realease date */}
-                    <div>
-                      <p className="text-muted text-content">Release date</p>
-                      <p>{detailMovie.release}</p>
-                    </div>
-                    {/* duration */}
-                    <div>
-                      <p className="text-muted text-content">Duration</p>
-                      <p>{detailMovie.duration}</p>
-                    </div>
-                  </div>
-                  <div className="col-md-9 col-sm-12">
-                    {/* directed by */}
-                    <div>
-                      <p className="text-muted text-content">Directed by</p>
-                      <p>{detailMovie.director}</p>
-                    </div>
-                    {/* casts */}
-                    <div>
-                      <p className="text-muted text-content">Casts</p>
-                      <p>
-                        {detailMovie.cast.map((item, key) => (
-                          <span>
-                            {detailMovie.cast.length - 1 === key
-                              ? item
-                              : `${item}, `}
-                          </span>
-                        ))}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <hr /> {/* hair line */}
-                <div>
-                  {/* synopsis */}
-                  <h5>Synopsis</h5>
-                  <p className="synopsis-content">{detailMovie.desc}</p>
-                </div>
+              <hr /> {/* hair line */}
+              <div>
+                {/* synopsis */}
+                <h5>Synopsis</h5>
+                <p className="synopsis-content">{detailMovie.desc}</p>
               </div>
             </div>
-          </section>
-          {/* End Content */}
-        </>
+          </div>
+        </section>
       ) : null}
+      {/* End Content */}
 
       {/* Start Cinema */}
-      <section id="cinemas" className="mt-5">
-        <div className="container">
-          <h3 className="text-center py-4">Showtimes and Tickets</h3>
-          <div className="row">
-            {listCinemas.map((item) => (
-              <div className="col col-md-4 col-sm-12">
-                <div className="card-cinemas mb-5">
-                  {/* Top Content */}
-                  <div className="d-flex gap-3 px-3">
-                    <img
-                      src={item.logo}
-                      alt="cinemas logo"
-                      className="mt-3 px-2 py-2"
-                    />
-                    <div>
-                      <h4 className="cinema-tittle">{item.name}</h4>
-                      <p className="cinema-address">{item.address}</p>
+      {detailMovie !== null ? (
+        <section id="cinemas" className="mt-5">
+          <div className="container">
+            <h3 className="text-center py-3">Showtimes and Tickets</h3>
+            <div className="d-flex gap-3 justify-content-center mb-4">
+              <div style={{ width: "280px" }}>
+                <input
+                  type="date"
+                  className="form-control"
+                  onChange={(e) => setDateMovie(e.target.value)}
+                />
+              </div>
+              <select
+                class="form-select form-select-sm"
+                onChange={(e) => setTimeMovie(e.target.value)}
+                style={{ width: "280px" }}
+              >
+                <option selected>Select Time</option>
+                <option value="10:00">10:00 WIB</option>
+                <option value="13:00">13:00 WIB</option>
+                <option value="16:00">16:00 WIB</option>
+                <option value="19:00">19:00 WIB</option>
+              </select>
+            </div>
+            <div className="row">
+              {listCinemas.map((item) => (
+                <div className="col col-md-4 col-sm-12">
+                  <div className="card-cinemas mb-5">
+                    {/* Top Content */}
+                    <div className="d-flex gap-3 px-3">
+                      <img
+                        src={item.logo}
+                        alt="cinemas logo"
+                        className="mt-3 px-2 py-2"
+                      />
+                      <div>
+                        <h4 className="cinema-tittle">{item.name}</h4>
+                        <p className="cinema-address">{item.address}</p>
+                      </div>
+                    </div>
+                    <hr className="mt-2" />
+                    {/* Bottom Content */}
+                    <div className="d-flex justify-content-between gap-3 px-4 showtime-schedule">
+                      {item.movieStart.map((nestedItem) => (
+                        <span>{nestedItem} WIB</span>
+                      ))}
+                    </div>
+                    <div className="d-flex justify-content-between px-4 py-3">
+                      <span className="price">Price</span>
+                      <span className="seat-price">
+                        Rp.{item.priceDisplay}/seat
+                      </span>
+                    </div>
+                    <div className="d-grid px-4 py-3">
+                      <button
+                        className={
+                          dateMovie && timeMovie
+                            ? "btn btn-primary"
+                            : "btn btn-secondary"
+                        }
+                        onClick={() => {
+                          if (dateMovie && timeMovie)
+                            navigate(`/choose-seat/${slug}`, {
+                              state: {
+                                dateMovie,
+                                timeMovie,
+                                cinemaId: item.id,
+                                movieTitle: detailMovie.tittle,
+                                priceDisplay: item.priceDisplay,
+                                price: item.price,
+                                cinemaName: item.name,
+                                cinemaLogo: item.logo,
+                              },
+                            });
+                        }}
+                        disabled={!dateMovie || !timeMovie}
+                      >
+                        Book Now
+                      </button>
                     </div>
                   </div>
-                  <hr className="mt-2" />
-                  {/* Bottom Content */}
-                  <div className="d-flex justify-content-between gap-3 px-4 showtime-schedule">
-                    {item.movieStart.map((nestedItem) => (
-                      <span>{nestedItem} WIB</span>
-                    ))}
-                  </div>
-                  <div className="d-flex justify-content-between px-4 py-3">
-                    <span className="price">Price</span>
-                    <span className="seat-price">
-                      Rp.{item.priceDisplay}/seat
-                    </span>
-                  </div>
-                  <div className="d-grid px-4 py-3">
-                    <button
-                      className="btn btn-primary"
-                      onClick={() => {
-                        navigate(`/choose-seat/${slug}`);
-                      }}
-                    >
-                      Book Now
-                    </button>
-                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ) : null}
       {/* End Cinema */}
 
       {/* Start Footer */}
