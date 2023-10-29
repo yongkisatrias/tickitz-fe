@@ -96,7 +96,7 @@ function ChooseSeat() {
 
   React.useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-    // handle hanya yang sudah login aja
+    // Handle only if already login
     if (!localStorage.getItem("token") && !localStorage.getItem("profile")) {
       if (window.confirm("Silahkan login terlebih dahulu")) {
         navigate("/");
@@ -116,15 +116,15 @@ function ChooseSeat() {
       {/* End Header */}
 
       {/* Content */}
-      <div id="choose-seat" className="py-5">
+      <div id="choose-seat" className="pb-5">
         <div className="container">
           <div className="row">
             <div className="col col-md-8 col-sm-12">
               <section id="content">
                 {/* Movie Selected */}
-                <h2 className="movie-selected mb-4">Movie Selected</h2>
+                <h2 className="movie-selected mb-4 mt-4">Movie Selected</h2>
                 {/* Movie Title */}
-                <div className="movie-tittle-card px-5 py-3">
+                <div className="movie-tittle-card px-4 py-3">
                   <h2>{movieTitle}</h2>
                 </div>
                 {/* Choose Your Seat */}
@@ -195,62 +195,34 @@ function ChooseSeat() {
                 </div>
               </section>
             </div>
-            <div className="col col-md-4">
-              <h2
-                className="mb-3"
-                style={{ fontSize: "24px", fontWeight: "bolder" }}
-              >
-                Order Info
-              </h2>
+            <div className="col col-md-4 col-sm-12">
+              <h2 className="order-info mb-4 mt-4">Order Info</h2>
 
-              <div
-                style={{
-                  backgroundColor: "#fff",
-                  borderRadius: "10px",
-                }}
-              >
-                <div style={{ padding: "20px 20px 0px 20px" }}>
-                  <div className="d-flex justify-content-center w-100 mb-2">
-                    <img src={cinemaLogo} width="100px" alt="logo" />
+              <div className="order-info-card">
+                <div>
+                  <div className="d-flex justify-content-center pt-4 pb-2">
+                    <img src={cinemaLogo} width="110px" alt="logo" />
                   </div>
-                  <h5 className="text-center mb-5">{cinemaName}</h5>
+                  <h5 className="text-center pb-2">{cinemaName}</h5>
 
-                  <div className="d-flex justify-content-between">
-                    <p>Movie selected</p>
-                    <p
-                      className="single-text"
-                      style={{ fontWeight: "bold", maxWidth: "250px" }}
-                    >
-                      {movieTitle}
-                    </p>
+                  <div className="d-flex justify-content-between px-3">
+                    <p className="order-info-card-left">Movie selected</p>
+                    <p className="order-info-card-right">{movieTitle}</p>
                   </div>
 
-                  <div className="d-flex justify-content-between">
-                    <p>Time & Date</p>
-                    <p
-                      className="single-text"
-                      style={{ fontWeight: "bold", maxWidth: "250px" }}
-                    >
-                      {selectedDate}
-                    </p>
+                  <div className="d-flex justify-content-between px-3">
+                    <p className="order-info-card-left">Time & Date</p>
+                    <p className="order-info-card-right">{selectedDate}</p>
                   </div>
 
-                  <div className="d-flex justify-content-between">
-                    <p>One ticket price</p>
-                    <p
-                      className="single-text"
-                      style={{ fontWeight: "bold", maxWidth: "250px" }}
-                    >
-                      Rp {priceDisplay}
-                    </p>
+                  <div className="d-flex justify-content-between px-3">
+                    <p className="order-info-card-left">One ticket price</p>
+                    <p className="order-info-card-right">Rp {priceDisplay}</p>
                   </div>
 
-                  <div className="d-flex justify-content-between">
-                    <p>Seat choosed</p>
-                    <p
-                      className="single-text"
-                      style={{ fontWeight: "bold", maxWidth: "250px" }}
-                    >
+                  <div className="d-flex justify-content-between px-3">
+                    <p className="order-info-card-left">Seat choosed</p>
+                    <p className="order-info-card-right">
                       {selectedSeat.map((item) => `${item.replace("_", "")}, `)}
                     </p>
                   </div>
@@ -258,15 +230,9 @@ function ChooseSeat() {
 
                 <hr />
 
-                <div
-                  className="d-flex justify-content-between"
-                  style={{ padding: "0px 20px 0px 20px" }}
-                >
-                  <p style={{ fontWeight: "bold" }}>Total Payment</p>
-                  <p
-                    className="single-text text-primary"
-                    style={{ fontWeight: "bold" }}
-                  >
+                <div className="d-flex justify-content-between px-3">
+                  <p className="total-payment">Total Payment</p>
+                  <p className="total-price">
                     Rp {price * selectedSeat.length}
                   </p>
                 </div>

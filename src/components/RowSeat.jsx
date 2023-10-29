@@ -3,21 +3,21 @@ import React from "react";
 function RowSeat({ position, selectedSeat, setSelectedSeat, bookedSeat }) {
   const getSeatColor = (key) => {
     if (bookedSeat?.find((_item) => _item === `${position}${key}`)) {
-      return "#6E7191"; // booked
+      return "#6E7191"; // Storm Grey
     } else if (selectedSeat?.find((_item) => _item === `${position}${key}`)) {
-      return "#5F2EEA"; // ungu
+      return "#5F2EEA"; // Han Purple
     } else {
-      return "#D6D8E7"; // gray
+      return "#D6D8E7"; // Quartz
     }
   };
 
   const checkIfDisabled = (key) => {
     if (bookedSeat?.find((_item) => _item === `${position}${key}`)) {
-      return true; // booked
+      return true; // Booked
     } else if (selectedSeat?.find((_item) => _item === `${position}${key}`)) {
-      return true; // ungu
+      return true; // Choose seat
     } else {
-      return false; // gray
+      return false; // Available
     }
   };
 
@@ -29,7 +29,7 @@ function RowSeat({ position, selectedSeat, setSelectedSeat, bookedSeat }) {
         marginTop: "20px",
       }}
     >
-      <p>{position}</p>
+      <p className="row-seat">{position}</p>
       {/* left */}
       <div
         style={{
@@ -90,7 +90,7 @@ function RowSeat({ position, selectedSeat, setSelectedSeat, bookedSeat }) {
                   ]);
                 }
               }}
-            />
+            ></div>
           );
         })}
       </div>
