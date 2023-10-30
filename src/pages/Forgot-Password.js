@@ -24,7 +24,7 @@ function ForgotPassword() {
 
         setTimeout(() => {
           window.location.reload();
-        });
+        }, 1500);
       })
       .catch((error) => {
         const errorEmail = error?.response?.data?.messages?.email?.message;
