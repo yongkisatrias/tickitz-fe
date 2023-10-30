@@ -99,7 +99,7 @@ function ForgotPassword() {
                 </button>
                 <p className="text-center bottom-content mt-2">
                   Already reset password?{" "}
-                  <Link to="/register" className="auth-bottom-content">
+                  <Link to="/login" className="auth-bottom-content">
                     Login Here
                   </Link>
                 </p>
