@@ -22,7 +22,10 @@ function NavBar() {
           <Link to="/" className="navbar-menu d-desktop">
             Home
           </Link>
-          <Link to="/" className="navbar-menu d-desktop">
+          <Link
+            to="/view-all-upcoming-movies"
+            className="navbar-menu d-desktop"
+          >
             List Movie
           </Link>
         </div>
