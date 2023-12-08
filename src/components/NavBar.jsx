@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
+
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -5,6 +7,11 @@ function NavBar() {
   const [profile, setProfile] = React.useState(
     JSON.parse(localStorage.getItem("profile"))
   );
+
+  const handleLogout = () => {
+    localStorage.removeItem("profile");
+    window.location.reload();
+  };
 
   return (
     <>
@@ -21,14 +28,36 @@ function NavBar() {
         </div>
 
         {profile ? (
-          <img
-            className="d-desktop"
-            alt="profile picture"
-            src={profile?.photo}
-            width="50px"
-            height="50px"
-            style={{ background: "#CDCDCD", borderRadius: "50%" }}
-          />
+          <div>
+            <div class="dropdown">
+              <button
+                class="btn btn-sm dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  className="d-desktop"
+                  alt="profile picture"
+                  src={profile?.photo}
+                  width="50px"
+                  height="50px"
+                  style={{ background: "#CDCDCD", borderRadius: "50%" }}
+                />
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <button
+                    class="dropdown-item"
+                    type="button"
+                    onClick={handleLogout}
+                  >
+                    Log Out
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
         ) : (
           <div className="d-flex align-items-center gap-3">
             <Link to="/register">
