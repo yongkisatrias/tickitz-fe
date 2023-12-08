@@ -178,7 +178,7 @@ function Home() {
 
       {/* CTA Start */}
       <section id="cta" className="pb-3">
-        <div className="container mt-5 mb-5">
+        <div className="container mt-5 mb-5 shadow p-3 bg-body-tertiary rounded">
           <h3 className="text-muted text-center mt-5">
             Be the vanguard of the
           </h3>
