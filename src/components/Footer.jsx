@@ -3,6 +3,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Footer() {
+  const currentYearCopyright = new Date().getFullYear();
+
   return (
     <>
       {/* Footer Start */}
@@ -74,7 +76,7 @@ function Footer() {
           </div>
         </div>
         <p className="copyright text-center mt-5">
-          © 2020 Tickitz. All Rights Reserved.
+          © {currentYearCopyright} Tickitz. All Rights Reserved.
         </p>
       </footer>
       {/* Footer End */}
