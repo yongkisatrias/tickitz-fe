@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   resultNowShowing: [],
   resultUpcoming: [],
+  resultDetail: [],
 };
 
 export const counterSlice = createSlice({
@@ -19,11 +20,18 @@ export const counterSlice = createSlice({
       state.resultNowShowing = action.payload.setResultNowShowing;
       state.resultUpcoming = action.payload.setResultUpcoming;
     },
+    setDetailData: (state, action) => {
+      state.resultDetail = [...state.resultDetail, ...action.payload];
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { setResultNowShowing, setResultUpcoming, setAllData } =
-  counterSlice.actions;
+export const {
+  setResultNowShowing,
+  setResultUpcoming,
+  setAllData,
+  setDetailData,
+} = counterSlice.actions;
 
 export default counterSlice.reducer;

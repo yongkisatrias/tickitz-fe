@@ -5,6 +5,8 @@ import React from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
+import { useSelector, useDispatch } from "react-redux";
+import * as movieSlice from "../slices/movie";
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -12,7 +14,13 @@ import Footer from "../components/Footer";
 function Detail() {
   const navigate = useNavigate();
   const { slug } = useParams();
-  const [detailMovie, setDetailMovie] = React.useState(null);
+  const {
+    movie: { resultDetail },
+  } = useSelector((state) => state); // getter
+  const dispatch = useDispatch(); // setter
+  const detailMovie = resultDetail?.find((item) => item.slug === slug) ?? {};
+
+  // const [detailMovie, setDetailMovie] = React.useState(null);
   const [listCinemas, setListCinemas] = React.useState([]);
   const [dateMovie, setDateMovie] = React.useState(null);
   const [timeMovie, setTimeMovie] = React.useState(null);
@@ -27,7 +35,8 @@ function Detail() {
 
       if (requestDetail.data.data.length > 0) {
         // Get data from response API and access response array index 0
-        setDetailMovie(requestDetail.data.data[0]);
+        // setDetailMovie(requestDetail.data.data[0]);
+        dispatch(movieSlice.setDetailData(requestDetail.data.data));
       }
 
       // Get Detail Cinema
@@ -80,7 +89,7 @@ function Detail() {
             <div className="col-md-8 col-sm-12">
               <h2>{detailMovie.tittle}</h2>
               <p className="genres">
-                {detailMovie.genres.map((item, key) => (
+                {detailMovie?.genres?.map((item, key) => (
                   <span>
                     {detailMovie.genres.length - 1 === key ? item : `${item}, `}
                   </span>
@@ -109,7 +118,7 @@ function Detail() {
                   <div>
                     <p className="text-muted text-content">Casts</p>
                     <p>
-                      {detailMovie.cast.map((item, key) => (
+                      {detailMovie?.cast?.map((item, key) => (
                         <span>
                           {detailMovie.cast.length - 1 === key
                             ? item
