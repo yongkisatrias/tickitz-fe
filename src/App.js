@@ -3,6 +3,8 @@ import "./style/App.mobile.css";
 
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import store from "./store";
+import { Provider } from "react-redux";
 
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
@@ -46,7 +48,11 @@ const router = createBrowserRouter([
 
 function App() {
   // register to the application
-  return <RouterProvider router={router} />;
+  return (
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
+  );
 }
 
 export default App;
