@@ -3,6 +3,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { persistor } from "../store"; // for logout feature
 
 function NavBar() {
   const {
@@ -10,7 +11,7 @@ function NavBar() {
   } = useSelector((state) => state);
 
   const handleLogout = () => {
-    localStorage.removeItem("profile");
+    persistor.purge();
     window.location.reload();
   };
 
