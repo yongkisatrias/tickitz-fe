@@ -4,6 +4,7 @@ import "../style/Auth.mobile.css";
 import axios from "axios";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Register() {
   const navigate = useNavigate();
@@ -14,9 +15,12 @@ function Register() {
   const [isLoading, setIsLoading] = React.useState(false);
   const [isSuccess, setIsSuccess] = React.useState(false);
   const [errorMessage, setErrorMessage] = React.useState(null);
+  const {
+    user: { profile, token },
+  } = useSelector((state) => state);
 
   React.useEffect(() => {
-    if (localStorage.getItem("token") && localStorage.getItem("profile")) {
+    if (token && profile) {
       navigate("/");
     }
   }, []);

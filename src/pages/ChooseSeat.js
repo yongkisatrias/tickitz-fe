@@ -7,6 +7,7 @@ import moment from "moment/moment";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 import ScrollToTop from "react-scroll-to-top";
+import { useSelector } from "react-redux";
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -32,6 +33,9 @@ function ChooseSeat() {
   const [bookedSeat, setBookedSeat] = React.useState([]);
   const [selectedDate, setSelectedDate] = React.useState(null);
   const [isLoading, setIsLoading] = React.useState(false);
+  const {
+    user: { token },
+  } = useSelector((state) => state);
 
   const handleAvailableSeat = async () => {
     try {
@@ -68,7 +72,7 @@ function ChooseSeat() {
         },
         {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            Authorization: `Bearer ${token}`,
           },
         }
       );

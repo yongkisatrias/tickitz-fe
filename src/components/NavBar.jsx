@@ -2,11 +2,12 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function NavBar() {
-  const [profile, setProfile] = React.useState(
-    JSON.parse(localStorage.getItem("profile"))
-  );
+  const {
+    user: { profile },
+  } = useSelector((state) => state);
 
   const handleLogout = () => {
     localStorage.removeItem("profile");

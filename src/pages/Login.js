@@ -4,9 +4,16 @@ import "../style/Auth.mobile.css";
 import axios from "axios";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import * as userSlice from "../slices/user";
 
 function Login() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const {
+    user: { profile, token },
+  } = useSelector((state) => state);
+
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [isLoading, setIsLoading] = React.useState(false);
@@ -14,7 +21,7 @@ function Login() {
   const [errorMessage, setErrorMessage] = React.useState(null);
 
   React.useEffect(() => {
-    if (localStorage.getItem("token") && localStorage.getItem("profile")) {
+    if (token && profile) {
       navigate("/");
     }
   }, []);
@@ -32,14 +39,17 @@ function Login() {
         const token = response?.data?.data?.token;
         const profile = response?.data?.data?.result;
 
-        localStorage.setItem("token", token);
-        localStorage.setItem("profile", JSON.stringify(profile));
+        // localStorage.setItem("token", token);
+        // localStorage.setItem("profile", JSON.stringify(profile));
 
+        dispatch(userSlice.setUser(profile));
+        dispatch(userSlice.setToken(token));
         setIsSuccess(true);
+        navigate("/");
 
-        setTimeout(() => {
-          window.location.reload();
-        }, 1500);
+        // setTimeout(() => {
+        //   window.location.reload();
+        // }, 1500);
       })
       .catch((error) => {
         const errorEmail = error?.response?.data?.messages?.email?.message;
