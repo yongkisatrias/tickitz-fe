@@ -4,6 +4,7 @@ const initialState = {
   resultNowShowing: [],
   resultUpcoming: [],
   resultDetail: [],
+  resultCinema: [],
 };
 
 export const counterSlice = createSlice({
@@ -23,6 +24,12 @@ export const counterSlice = createSlice({
     setDetailData: (state, action) => {
       state.resultDetail = [...state.resultDetail, ...action.payload];
     },
+    setCinemaData: (state, action) => {
+      state.resultCinema = {
+        ...state.resultCinema,
+        [action.payload.movieName]: action.payload.data,
+      };
+    },
   },
 });
 
@@ -32,6 +39,7 @@ export const {
   setResultUpcoming,
   setAllData,
   setDetailData,
+  setCinemaData,
 } = counterSlice.actions;
 
 export default counterSlice.reducer;

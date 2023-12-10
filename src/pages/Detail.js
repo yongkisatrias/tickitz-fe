@@ -15,13 +15,14 @@ function Detail() {
   const navigate = useNavigate();
   const { slug } = useParams();
   const {
-    movie: { resultDetail },
+    movie: { resultDetail, resultCinema },
   } = useSelector((state) => state); // getter
   const dispatch = useDispatch(); // setter
   const detailMovie = resultDetail?.find((item) => item.slug === slug) ?? {};
 
   // const [detailMovie, setDetailMovie] = React.useState(null);
-  const [listCinemas, setListCinemas] = React.useState([]);
+  // const [listCinemas, setListCinemas] = React.useState([]);
+  const listCinemas = resultCinema[slug] ?? [];
   const [dateMovie, setDateMovie] = React.useState(null);
   const [timeMovie, setTimeMovie] = React.useState(null);
 
@@ -29,23 +30,33 @@ function Detail() {
   const handleGetApi = async () => {
     try {
       // Get Detail Movie
-      const requestDetail = await axios.get(
-        `https://tickitz-be.onrender.com/yongki/movie/detail/${slug}`
-      );
+      if (Object.keys(detailMovie).length === 0) {
+        const requestDetail = await axios.get(
+          `https://tickitz-be.onrender.com/yongki/movie/detail/${slug}`
+        );
 
-      if (requestDetail.data.data.length > 0) {
-        // Get data from response API and access response array index 0
-        // setDetailMovie(requestDetail.data.data[0]);
-        dispatch(movieSlice.setDetailData(requestDetail.data.data));
+        if (requestDetail.data.data.length > 0) {
+          // Get data from response API and access response array index 0
+          // setDetailMovie(requestDetail.data.data[0]);
+          dispatch(movieSlice.setDetailData(requestDetail.data.data));
+        }
       }
 
-      // Get Detail Cinema
-      const requestCinema = await axios.get(
-        `https://tickitz-be.onrender.com/yongki/movie/${slug}/cinemas`
-      );
+      if (listCinemas.length === 0) {
+        // Get Detail Cinema
+        const requestCinema = await axios.get(
+          `https://tickitz-be.onrender.com/yongki/movie/${slug}/cinemas`
+        );
 
-      if (requestCinema.data.data.length > 0) {
-        setListCinemas(requestCinema.data.data);
+        if (requestCinema.data.data.length > 0) {
+          dispatch(
+            movieSlice.setCinemaData({
+              movieName: slug,
+              data: requestCinema.data.data,
+            })
+          );
+          // setListCinemas(requestCinema.data.data);
+        }
       }
     } catch (error) {}
   };
