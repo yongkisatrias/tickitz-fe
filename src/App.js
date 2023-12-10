@@ -3,8 +3,9 @@ import "./style/App.mobile.css";
 
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import store from "./store";
+import { store, persistor } from "./store";
 import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
 
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
@@ -50,7 +51,9 @@ function App() {
   // register to the application
   return (
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <PersistGate loading={null} persistor={persistor}>
+        <RouterProvider router={router} />
+      </PersistGate>
     </Provider>
   );
 }
