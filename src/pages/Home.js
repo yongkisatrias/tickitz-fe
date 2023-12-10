@@ -8,35 +8,47 @@ import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
+import { useSelector, useDispatch } from "react-redux";
+import * as movieSlice from "../slices/movie";
 
 function Home() {
   // mounted / mounting
   const date = new Date();
   const month = date.toLocaleDateString("default", { month: "long" });
+  const {
+    movie: { resultNowShowing, resultUpcoming },
+  } = useSelector((state) => state);
+  const dispatch = useDispatch();
 
-  const [resultNowShowing, setResultNowShowing] = React.useState([]);
-  const [resultUpcoming, setResultUpcoming] = React.useState([]);
+  // const [resultNowShowing, setResultNowShowing] = React.useState([]);
+  // const [resultUpcoming, setResultUpcoming] = React.useState([]);
   const [selectedMonth, setSelectedMonth] = React.useState(month.toLowerCase());
 
   // lifecycle
   const handleGetResponse = async () => {
     try {
-      // Get data from Now Showing
-      const nowShowing = await axios.get(
-        "https://tickitz-be.onrender.com/yongki/movie/now-showing"
-      );
+      if (resultNowShowing.length === 0) {
+        // Get data from Now Showing
+        const nowShowing = await axios.get(
+          "https://tickitz-be.onrender.com/yongki/movie/now-showing"
+        );
 
-      if (nowShowing.status === 200) {
-        setResultNowShowing(nowShowing.data.data);
+        if (nowShowing.status === 200) {
+          dispatch(movieSlice.setResultNowShowing(nowShowing.data.data)); // setter for redux
+          // setResultNowShowing(nowShowing.data.data);
+        }
       }
 
-      // Get data from Upcoming
-      const upcoming = await axios.get(
-        "https://tickitz-be.onrender.com/yongki/movie/upcoming"
-      );
+      if (resultUpcoming.length === 0) {
+        // Get data from Upcoming
+        const upcoming = await axios.get(
+          "https://tickitz-be.onrender.com/yongki/movie/upcoming"
+        );
 
-      if (upcoming.status === 200) {
-        setResultUpcoming(upcoming.data.data);
+        if (upcoming.status === 200) {
+          dispatch(movieSlice.setResultUpcoming(upcoming.data.data)); // setter for redux
+          // setResultUpcoming(upcoming.data.data);
+        }
       }
     } catch (error) {
       console.log(error);
