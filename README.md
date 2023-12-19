@@ -55,17 +55,21 @@ password: tickitz@12345
 
 ## Screenshot Project
 
-|                          Home Page                          |                         Register Page                         |                         Login Page                         |                             Reset Password                             |
-| :---------------------------------------------------------: | :-----------------------------------------------------------: | :--------------------------------------------------------: | :--------------------------------------------------------------------: |
-| ![Home Page](https://i.ibb.co/BL7WvYk/Tickitz-homepage.png) | ![Register Page](https://i.ibb.co/KGwNMhV/Tickitz-signup.png) | ![Login Page](https://i.ibb.co/1zZKXTb/Tickitz-signin.png) | ![Reset Password](https://i.ibb.co/mhrCzq9/Tickitz-reset-password.png) |
+|                         Register Page                         |                         Login Page                         |                             Reset Password                             |
+| :-----------------------------------------------------------: | :--------------------------------------------------------: | :--------------------------------------------------------------------: |
+| ![Register Page](https://i.ibb.co/KGwNMhV/Tickitz-signup.png) | ![Login Page](https://i.ibb.co/1zZKXTb/Tickitz-signin.png) | ![Reset Password](https://i.ibb.co/mhrCzq9/Tickitz-reset-password.png) |
 
-|                          List Movie                          |                            Movie Detail                            |                           Choose Seat                            |                            Payment Page Midtrans                             |
-| :----------------------------------------------------------: | :----------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------------------: |
-| ![List Movie](https://i.ibb.co/jGmJVGf/Tickitz-upcoming.png) | ![Movie Detail](https://i.ibb.co/NpycGy6/Tickitz-movie-detail.png) | ![Choose Seat](https://i.ibb.co/McRp5Vt/Tickitz-choose-seat.png) | ![Payment Page Midtrans](https://i.ibb.co/wr4VRtr/Tickitz-start-payment.png) |
+|                          Home Page                          |                          List Movie                          |                            Movie Detail                            |
+| :---------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------------: |
+| ![Home Page](https://i.ibb.co/BL7WvYk/Tickitz-homepage.png) | ![List Movie](https://i.ibb.co/jGmJVGf/Tickitz-upcoming.png) | ![Movie Detail](https://i.ibb.co/NpycGy6/Tickitz-movie-detail.png) |
 
-|                            Proof of Payment Email                             |                               Payment Successful                                |                             Digital Ticket Email                             |
-| :---------------------------------------------------------------------------: | :-----------------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
-| ![Proof of Payment Email](https://i.ibb.co/sjzYzKq/Tickitz-proof-payment.png) | ![Payment Successful](https://i.ibb.co/H4HmbWK/Tickitz-payment-successfull.png) | ![Digital Ticket Email](https://i.ibb.co/txfjsRm/Tickitz-digital-ticket.png) |
+|                           Choose Seat                            |                            Payment Page Midtrans                             |                               Payment Successful                                |
+| :--------------------------------------------------------------: | :--------------------------------------------------------------------------: | :-----------------------------------------------------------------------------: |
+| ![Choose Seat](https://i.ibb.co/McRp5Vt/Tickitz-choose-seat.png) | ![Payment Page Midtrans](https://i.ibb.co/wr4VRtr/Tickitz-start-payment.png) | ![Payment Successful](https://i.ibb.co/H4HmbWK/Tickitz-payment-successfull.png) |
+
+|                            Proof of Payment Email                             |                             Digital Ticket Email                             |
+| :---------------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
+| ![Proof of Payment Email](https://i.ibb.co/sjzYzKq/Tickitz-proof-payment.png) | ![Digital Ticket Email](https://i.ibb.co/txfjsRm/Tickitz-digital-ticket.png) |
 
 ## Contact
 
