@@ -7,7 +7,8 @@ import moment from "moment/moment";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 import ScrollToTop from "react-scroll-to-top";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import * as userSlice from "../slices/user";
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -34,7 +35,7 @@ function ChooseSeat() {
   const [selectedDate, setSelectedDate] = React.useState(null);
   const [isLoading, setIsLoading] = React.useState(false);
   const {
-    user: { token },
+    user: { profile, token },
   } = useSelector((state) => state);
 
   const handleAvailableSeat = async () => {
@@ -83,7 +84,7 @@ function ChooseSeat() {
           {},
           {
             headers: {
-              Authorization: `Bearer ${localStorage.getItem("token")}`,
+              Authorization: `Bearer ${token}`,
             },
           }
         );
@@ -102,7 +103,7 @@ function ChooseSeat() {
   React.useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     // Handle only if already login
-    if (!localStorage.getItem("token") && !localStorage.getItem("profile")) {
+    if (!token && profile) {
       if (
         window.swal(
           "Access Denied",
