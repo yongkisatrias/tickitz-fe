@@ -14,6 +14,7 @@
 - [Demo](#demo)
 - [Screenshot project](#screenshot-project)
 - [Contact](#contact)
+- [Related Project](#related-project)
 
 ## About Project
 
@@ -91,3 +92,9 @@ Contributions are the cornerstone of the open source community, turning it into 
 4. Push to the Branch (`git push origin feature/yourbranch`)
 5. Open a Pull Request
 ```
+
+## Related Project
+
+🚀 [`Demo Tickitz`](https://tickitz-fe-yongkisatrias.vercel.app/)
+
+🚀 [`Tickitz Backend`](https://pijar-camp-batch15-tickitz.cyclic.app/)
