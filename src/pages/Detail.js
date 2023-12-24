@@ -32,7 +32,7 @@ function Detail() {
       // Get Detail Movie
       if (Object.keys(detailMovie).length === 0) {
         const requestDetail = await axios.get(
-          `https://tickitz-be.onrender.com/yongki/movie/detail/${slug}`
+          `https://pijar-camp-batch15-tickitz.cyclic.app/yongki/movie/detail/${slug}`
         );
 
         if (requestDetail.data.data.length > 0) {
@@ -45,7 +45,7 @@ function Detail() {
       if (listCinemas.length === 0) {
         // Get Detail Cinema
         const requestCinema = await axios.get(
-          `https://tickitz-be.onrender.com/yongki/movie/${slug}/cinemas`
+          `https://pijar-camp-batch15-tickitz.cyclic.app/yongki/movie/${slug}/cinemas`
         );
 
         if (requestCinema.data.data.length > 0) {

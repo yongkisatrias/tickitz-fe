@@ -30,12 +30,15 @@ function Register() {
     setErrorMessage(null);
 
     axios
-      .post("https://tickitz-be.onrender.com/yongki/auth/register", {
-        fullname: fullname,
-        phone_number: phoneNumber,
-        email: email,
-        password: password,
-      })
+      .post(
+        "https://pijar-camp-batch15-tickitz.cyclic.app/yongki/auth/register",
+        {
+          fullname: fullname,
+          phone_number: phoneNumber,
+          email: email,
+          password: password,
+        }
+      )
       .then(() => {
         setIsSuccess(true);
       })
