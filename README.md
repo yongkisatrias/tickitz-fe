@@ -79,7 +79,7 @@ Contributions are the cornerstone of the open source community, turning it into 
 
 ## Related Project
 
-🚀 [`Tickitz Backend`](https://pijar-camp-batch15-tickitz.cyclic.app/)
+🚀 [`Tickitz Backend`](https://tickitz-be.onrender.com/)
 
 Or, you can see other projects on my personal portfolio website.
 

@@ -16,12 +16,9 @@ function ForgotPassword() {
     setErrorMessage(null);
 
     axios
-      .post(
-        "https://pijar-camp-batch15-tickitz.cyclic.app/yongki/auth/forgot-password",
-        {
-          email: email,
-        }
-      )
+      .post("https://tickitz-be.onrender.com/yongki/auth/forgot-password", {
+        email: email,
+      })
       .then(() => {
         setIsSuccess(true);
 

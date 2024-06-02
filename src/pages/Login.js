@@ -31,7 +31,7 @@ function Login() {
     setErrorMessage(null);
 
     axios
-      .post("https://pijar-camp-batch15-tickitz.cyclic.app/yongki/auth/login", {
+      .post("https://tickitz-be.onrender.com/yongki/auth/login", {
         email: email,
         password: password,
       })
