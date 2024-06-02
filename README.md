@@ -54,7 +54,7 @@ password: tickitz@12345
 
 ## Screenshot Project
 
-<img src="https://i.ibb.co/J56Pvs9/Tickitz.png" alt="Tickitz" border="0">
+<img src="https://i.ibb.co.com/J56Pvs9/Tickitz.png" alt="Tickitz" border="0">
 
 ## Contact
 
