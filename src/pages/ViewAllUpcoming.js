@@ -21,7 +21,7 @@ function ViewAllUpcoming() {
     try {
       // Get data from Upcoming
       const upcoming = await axios.get(
-        "https://tickitz-be.onrender.com/yongki/movie/upcoming"
+        "https://tikitz-v2.adaptable.app/yongki/movie/upcoming"
       );
 
       if (upcoming.status === 200) {

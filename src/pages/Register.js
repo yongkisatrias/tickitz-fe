@@ -30,7 +30,7 @@ function Register() {
     setErrorMessage(null);
 
     axios
-      .post("https://tickitz-be.onrender.com/yongki/auth/register", {
+      .post("https://tikitz-v2.adaptable.app/yongki/auth/register", {
         fullname: fullname,
         phone_number: phoneNumber,
         email: email,

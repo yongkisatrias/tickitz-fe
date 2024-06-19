@@ -30,7 +30,7 @@ function Home() {
       if (resultNowShowing.length === 0) {
         // Get data from Now Showing
         const nowShowing = await axios.get(
-          "https://tickitz-be.onrender.com/yongki/movie/now-showing"
+          "https://tikitz-v2.adaptable.app/yongki/movie/now-showing"
         );
 
         if (nowShowing.status === 200) {
@@ -42,7 +42,7 @@ function Home() {
       if (resultUpcoming.length === 0) {
         // Get data from Upcoming
         const upcoming = await axios.get(
-          "https://tickitz-be.onrender.com/yongki/movie/upcoming"
+          "https://tikitz-v2.adaptable.app/yongki/movie/upcoming"
         );
 
         if (upcoming.status === 200) {

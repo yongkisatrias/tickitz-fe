@@ -48,7 +48,7 @@ https://tickitz-fe-yongkisatrias.vercel.app/
 if you want to login, without register:
 
 ```
-email: yongkisatrias@gmail.com
+email: kinewo3241@exeneli.com
 password: tickitz@12345
 ```
 
@@ -79,7 +79,7 @@ Contributions are the cornerstone of the open source community, turning it into 
 
 ## Related Project
 
-🚀 [`Tickitz Backend`](https://tickitz-be.onrender.com/)
+🚀 [`Tickitz Backend`](https://tikitz-v2.adaptable.app/)
 
 Or, you can see other projects on my personal portfolio website.
 

@@ -16,7 +16,7 @@ function ForgotPassword() {
     setErrorMessage(null);
 
     axios
-      .post("https://tickitz-be.onrender.com/yongki/auth/forgot-password", {
+      .post("https://tikitz-v2.adaptable.app/yongki/auth/forgot-password", {
         email: email,
       })
       .then(() => {
