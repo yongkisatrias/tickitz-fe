@@ -1,10 +1,6 @@
 # Tickitz - Front End
 
-<div align="center">
-<a href="https://github.com/yongkisatrias/tickitz-fe">
-    <img src="https://i.ibb.co/hyW8rsy/Tickitz-logo.png" alt="Tickitz-logo" border="0">
-</a>
-</div>
+![tickitz-logo](https://github.com/user-attachments/assets/6e273683-db30-4a9b-8bf0-9b41b57cff34)
 
 ## Table of Contents
 
@@ -54,7 +50,7 @@ password: tickitz@12345
 
 ## Screenshot Project
 
-<img src="https://i.ibb.co.com/J56Pvs9/Tickitz.png" alt="Tickitz" border="0">
+![Tickitz](https://github.com/user-attachments/assets/8ceca477-416a-42ce-aa58-a371cbf115b5)
 
 ## Contact
 
