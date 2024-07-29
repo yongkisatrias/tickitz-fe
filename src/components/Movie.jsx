@@ -5,15 +5,19 @@ function Movie(props) {
   const { poster, tittle, genres, slug } = props;
 
   return (
-    <div>
-      <Link to={`/detail/${slug}`} style={{ textDecoration: "none" }}>
-        <img
-          className="movie-poster movie-center-mobile"
-          width={"100%"}
-          src={poster}
-          alt="movie poster"
-        />
-      </Link>
+    <div className="d-flex flex-column">
+      <div className="">
+        <Link to={`/detail/${slug}`} style={{ textDecoration: "none" }}>
+          <div className="">
+            <img
+              className="movie-poster movie-center-mobile"
+              width={"100%"}
+              src={poster}
+              alt="movie poster"
+            />
+          </div>
+        </Link>
+      </div>
       <h4 className="text-center mt-2 movie-tittle single-text movie-center-mobile">
         {tittle}
       </h4>

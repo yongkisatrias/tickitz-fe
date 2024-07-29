@@ -90,7 +90,7 @@ function Home() {
           {/* Header Tittle */}
           <div className="d-flex justify-content-between align-items-center">
             <h2 className="now-showing-tittle-left">Now Showing</h2>
-            <Link className="now-showing-tittle-right" to="/">
+            <Link className="now-showing-tittle-right" to="/now-showing">
               View All
             </Link>
           </div>
@@ -116,10 +116,7 @@ function Home() {
           {/* Header Tittle */}
           <div className="d-flex justify-content-between align-items-center">
             <h2 className="upcoming-movies-tittle-left">Upcoming Movies</h2>
-            <Link
-              className="upcoming-movies-tittle-right"
-              to="/view-all-upcoming-movies"
-            >
+            <Link className="upcoming-movies-tittle-right" to="/upcoming">
               View All
             </Link>
           </div>
